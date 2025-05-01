@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>b1121cd3-9e7b-4e90-abd2-a44bd5ec5b89</ProjectGuid>
+    <ProjectGuid>{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>APEX.Common</RootNamespace>
@@ -31,24 +31,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\10User.png" />
+    <Content Include="Images\1Main.png" />
+    <Content Include="Images\2Settings.png" />
+    <Content Include="Images\3Vision.png" />
+    <Content Include="Images\4Motion.png" />
+    <Content Include="Images\5Ezd.png" />
+    <Content Include="Images\6Power.png" />
+    <Content Include="Images\7WebTest.png" />
+    <Content Include="Images\8Calib.png" />
+    <Content Include="Images\9Data.png" />
+    <Content Include="Images\ASM_Logo.jpg" />
+    <Content Include="Images\key-icon.png" />
+    <Content Include="Images\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
