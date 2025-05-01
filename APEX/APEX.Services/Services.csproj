@@ -10,8 +10,8 @@
     <ProjectGuid>{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>APEX.Services</RootNamespace>
-    <AssemblyName>APEX.Services</AssemblyName>
+    <RootNamespace>Services</RootNamespace>
+    <AssemblyName>Services</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -175,6 +175,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -208,7 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\App_Start.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WpfRouter.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Context\DbContextLocal.cs" />
     <Compile Include="Controllers\ForumController.cs" />
@@ -244,9 +245,9 @@
     <None Include="Views\Shared\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\APEX.Common\APEX.Common.csproj">
+    <ProjectReference Include="..\APEX.Common\Common.csproj">
       <Project>{b1121cd3-9e7b-4e90-abd2-a44bd5ec5b89}</Project>
-      <Name>APEX.Common</Name>
+      <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

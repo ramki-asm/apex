@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 
-namespace APEX.Services.Interfaces
+namespace Services.Interfaces
 {
     public interface INavigationService
     {

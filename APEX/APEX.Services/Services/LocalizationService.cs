@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
 using APEX.Services.Interfaces;
 
-namespace APEX.Services.Services
+
+namespace Services.Services
 {
-   
     public class LocalizationService : ILocalizationService
     {
         private readonly ResourceManager _resourceManager;
@@ -21,11 +18,14 @@ namespace APEX.Services.Services
             _currentCulture = CultureInfo.CurrentCulture;
         }
 
-        public string this[string key] => _resourceManager.GetString(key, _currentCulture) ?? key;
+        public string this[string key]
+        {
+            get { return _resourceManager.GetString(key, _currentCulture) ?? key; }
+        }
 
         public CultureInfo CurrentCulture
         {
-            get => _currentCulture;
+            get { return _currentCulture; }
             set
             {
                 if (_currentCulture != value)
@@ -38,15 +38,21 @@ namespace APEX.Services.Services
 
         public event EventHandler LanguageChanged;
 
-        public IEnumerable<CultureInfo> SupportedLanguages => new[]
+        public IEnumerable<CultureInfo> SupportedLanguages
         {
-        new CultureInfo("en-US"),
-        new CultureInfo("zh-CN")
-    };
+            get
+            {
+                return new[]
+                {
+                    new CultureInfo("en-US"),
+                    new CultureInfo("zh-CN")
+                };
+            }
+        }
 
         public string GetLocalizedString(string key, CultureInfo culture = null)
         {
-            throw new NotImplementedException();
+            return _resourceManager.GetString(key, culture ?? _currentCulture) ?? key;
         }
     }
 }

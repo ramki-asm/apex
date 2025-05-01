@@ -7,11 +7,10 @@
 ////-----------------------------------------------------------------------
 
 using Fluent.Infrastructure.FluentTools;
-using APEX.Services.DataBase;
+using Services.DataBase;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(APEX.Services.App_Start), "PreStart")]
 
-namespace APEX.Services {
+namespace Services {
     public static class App_Start {
         public static void PreStart() {
             FluentStartup.Initialize(typeof(DbContextLocal));

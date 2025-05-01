@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace APEX.Services.Interfaces
+namespace Services.Interfaces
 {
     public interface ILocalizationService
     {

@@ -12,7 +12,7 @@ using System.Data.Entity;
 using Fluent.Infrastructure.FluentDBContext;
 using APEX.Services.Models;
 
-namespace APEX.Services.DataBase 
+namespace Services.DataBase 
 {
     public class DbContextLocal : DBContext
     {

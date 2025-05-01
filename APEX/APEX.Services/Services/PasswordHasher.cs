@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
-using APEX.Services.Interfaces;
+using Services.Interfaces;
 
-namespace APEX.Services.Services
+namespace Services.Services
 {
     public class PasswordHasher : IPasswordHasher
     {
-        public (string Hash, string Salt) CreatePasswordHash(string password)
+        public Tuple<string, string> CreatePasswordHash(string password)
         {
             var salt = GenerateSalt();
             var hash = ComputeHash(password, salt);
-            return (hash, salt);
+            return Tuple.Create(hash, salt);
         }
 
         public bool VerifyPassword(string password, string hash, string salt)

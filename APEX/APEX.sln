@@ -3,18 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APEX.UI", "APEX.UI\APEX.UI.csproj", "{0E4351B4-704D-4A25-ABFE-0F778305939A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89} = {B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "APEX.Common\Common.csproj", "{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APEX.Common", "APEX.Common\APEX.Common.csproj", "{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "APEX.Configuration\Configuration.csproj", "{603DA113-71FA-4B60-BA8D-6EA916DB2A77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APEX.Configuration", "APEX.Configuration\APEX.Configuration.csproj", "{603DA113-71FA-4B60-BA8D-6EA916DB2A77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "APEX.Services\Services.csproj", "{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APEX.Services", "APEX.Services\APEX.Services.csproj", "{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Styles", "APEX.Styles\Styles.shproj", "{6E0C8217-961E-4A2F-922A-A57B713DDB0A}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "APEX.Styles", "APEX.Styles\APEX.Styles.shproj", "{6E0C8217-961E-4A2F-922A-A57B713DDB0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HG_Laser", "..\..\..\Users\A8753\Downloads\Dhanush Docs\Dhanush Docs\WPF\Projects\HG Laser\HG_Laser\HG_Laser\HG_Laser.csproj", "{C7BEADE1-63F6-4D45-A245-0481240A249F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0E4351B4-704D-4A25-ABFE-0F778305939A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E4351B4-704D-4A25-ABFE-0F778305939A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E4351B4-704D-4A25-ABFE-0F778305939A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E4351B4-704D-4A25-ABFE-0F778305939A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,6 +31,10 @@ Global
 		{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7BEADE1-63F6-4D45-A245-0481240A249F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7BEADE1-63F6-4D45-A245-0481240A249F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7BEADE1-63F6-4D45-A245-0481240A249F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7BEADE1-63F6-4D45-A245-0481240A249F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,7 +43,6 @@ Global
 		SolutionGuid = {EF764EFF-636F-496B-8E3D-69AF6B2CB03D}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		APEX.Styles\APEX.Styles.projitems*{0e4351b4-704d-4a25-abfe-0f778305939a}*SharedItemsImports = 4
 		APEX.Styles\APEX.Styles.projitems*{6e0c8217-961e-4a2f-922a-a57b713ddb0a}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

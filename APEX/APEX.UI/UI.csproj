@@ -324,17 +324,17 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\APEX.Common\APEX.Common.csproj">
+    <ProjectReference Include="..\APEX.Common\Common.csproj">
       <Project>{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}</Project>
-      <Name>APEX.Common</Name>
+      <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\APEX.Configuration\APEX.Configuration.csproj">
+    <ProjectReference Include="..\APEX.Configuration\Configuration.csproj">
       <Project>{603da113-71fa-4b60-ba8d-6ea916db2a77}</Project>
-      <Name>APEX.Configuration</Name>
+      <Name>Configuration</Name>
     </ProjectReference>
-    <ProjectReference Include="..\APEX.Services\APEX.Services.csproj">
+    <ProjectReference Include="..\APEX.Services\Services.csproj">
       <Project>{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}</Project>
-      <Name>APEX.Services</Name>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\APEX.Styles\APEX.Styles.projitems" Label="Shared" />
