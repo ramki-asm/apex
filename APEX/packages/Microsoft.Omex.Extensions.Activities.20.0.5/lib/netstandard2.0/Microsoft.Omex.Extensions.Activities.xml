@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Omex.Extensions.Activities</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Omex.Extensions.Activities.IActivitiesEventSender">
+            <summary>
+            Activity event source
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Activities.IActivitiesEventSender.SendActivityMetric(System.Diagnostics.Activity)">
+            <summary>
+            Send information about activity stop
+            </summary>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Activities.IActivityListenerConfigurator">
+            <summary>
+            Configures behavior of ActivityListener to decide when activity should be created based on additional information about them
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Activities.IActivityListenerConfigurator.ShouldListenTo(System.Diagnostics.ActivitySource)">
+            <summary>
+            Decides if activity object events that were created using the activity source object should be listened or not
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Activities.IActivityListenerConfigurator.SampleUsingParentId(System.Diagnostics.ActivityCreationOptions{System.String}@)">
+            <summary>
+            Decides if creating System.Diagnostics.Activity objects with a specific data state is allowed
+            Used when parentId specified
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Activities.IActivityListenerConfigurator.Sample(System.Diagnostics.ActivityCreationOptions{System.Diagnostics.ActivityContext}@)">
+            <summary>
+            Decides if creating System.Diagnostics.Activity objects with a specific data state is allowed
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Activities.ActivityLoggerHelpers.AppendPairs``1(System.Text.StringBuilder,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,``0}})">
+            <summary>
+            Appends collection of key value pairs to StringBuilder, by calling ToSting on key and value
+            </summary>
+            <remarks>
+            TODO: should be replaced by AppendJoin when we remove netstandard target, since KeyValuePair also overrides ToString
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Activities.DiagnosticsObserversInitializer">
+            <summary>
+            Hosted service for listening to diagnostic events
+            </summary>
+            <remarks>
+            Should be deleted after ASP .NET Core would support new approach, issue #300
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Omex.Extensions.Activities.DiagnosticsObserversInitializer.ExceptionEventEnding">
+            <summary>
+            Ending of the exception events
+            </summary>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Activities.AggregatedActivitiesEventSender">
+            <summary>
+            Type created to temporary combine ActivityEventSender and ActivityMetricsSender, it should be deleted after removal for ActivityEventSender
+            </summary>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Activities.OmexActivityListenerOptions">
+            <summary>
+            Configuration options for activity creation
+            </summary>
+            <remarks>
+            Applied only when DefaultActivityListenerCongigurator used
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Omex.Extensions.Activities.OmexActivityListenerOptions.ShouldListenTo">
+            <summary>
+            Decides if activity object events that were created using the activity source object should be listened or not
+            </summary>
+        </member>
+        <member name="P:Microsoft.Omex.Extensions.Activities.OmexActivityListenerOptions.SampleUsingParentId">
+            <summary>
+            Decides if creating System.Diagnostics.Activity objects with a specific data state is allowed
+            Used when parentId specified
+            </summary>
+        </member>
+        <member name="P:Microsoft.Omex.Extensions.Activities.OmexActivityListenerOptions.Sample">
+            <summary>
+            Decides if creating System.Diagnostics.Activity objects with a specific data state is allowed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions">
+            <summary>
+            Extension methods for the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> class
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddOmexActivitySource(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add ActivitySource to ServiceCollection
+            </summary>
+        </member>
+    </members>
+</doc>

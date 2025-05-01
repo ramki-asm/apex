@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Omex.Extensions.Hosting.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.HostBuilderExtensions">
+            <summary>
+            Extension to add Omex dependencies to HostBuilder
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.HostBuilderExtensions.BuildStatelessService(Microsoft.Extensions.Hosting.IHostBuilder,System.String,System.Action{Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder{Microsoft.Omex.Extensions.Hosting.Services.OmexStatelessService,System.Fabric.StatelessServiceContext}})">
+            <summary>
+            Configures host to run service fabric stateless service with initialized Omex dependencies
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.HostBuilderExtensions.BuildStatefulService(Microsoft.Extensions.Hosting.IHostBuilder,System.String,System.Action{Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder{Microsoft.Omex.Extensions.Hosting.Services.OmexStatefulService,System.Fabric.StatefulServiceContext}})">
+            <summary>
+            Configures host to run service fabric stateful service with initialized Omex dependencies
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.HostBuilderExtensions.AddOmexServiceFabricDependencies``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registering Dependency Injection classes that will provide Service Fabric specific information for logging
+            </summary>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.IListenerBuilder`1">
+            <summary>
+            Creates communication listener for SF service
+            </summary>
+        </member>
+        <member name="P:Microsoft.Omex.Extensions.Hosting.Services.IListenerBuilder`1.Name">
+            <summary>
+            Listener name
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.IListenerBuilder`1.Build(`0)">
+            <summary>
+            Creates communication listener for SF service
+            </summary>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.OmexHostedService">
+            <summary>
+            Wraps service run into HostedService
+            </summary>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.OmexServiceFabricContext">
+            <summary>
+            Create wrapper from Service Fabric context to provide log information
+            </summary>
+        </member>
+        <member name="P:Microsoft.Omex.Extensions.Hosting.Services.OmexServiceFabricContext.PartitionId">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.Omex.Extensions.Hosting.Services.OmexServiceFabricContext.ReplicaOrInstanceId">
+            <inheritdoc/>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.IServiceAction`1">
+            <summary>
+            Action that will be executed in RunAsync method of SF service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.IServiceAction`1.RunAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Action that will be executed in RunAsync method of SF service
+            </summary>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.IServiceFabricService`1">
+            <summary>
+            Interface to generalize service fabric services
+            </summary>
+        </member>
+        <member name="P:Microsoft.Omex.Extensions.Hosting.Services.IServiceFabricService`1.Context">
+            <summary>
+            Gets the service context that this service is operating under
+            </summary>
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.OmexStatefulService">
+            <summary>
+            Omex implementation of stateful service fabric service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.OmexStatefulService.OnOpenAsync(System.Fabric.ReplicaOpenMode,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.OmexStatefulService.CreateServiceReplicaListeners">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.OmexStatefulService.RunAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.OmexStatelessService">
+            <summary>
+            Omex implementation of stateless service fabric service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.OmexStatelessService.OnOpenAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.OmexStatelessService.CreateServiceInstanceListeners">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.OmexStatelessService.RunAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder`2">
+            <summary>
+            Wrapper on top of IHostBuilder to propagate proper context type and avoid type registration mistakes
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder`2.ConfigureServices(System.Action{Microsoft.Extensions.Hosting.HostBuilderContext,Microsoft.Extensions.DependencyInjection.IServiceCollection})">
+            <summary>
+            Method should be called only by extensions of this class
+            If you are creating a service please register dependencies before calling BuildService method and using this class
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder`2.AddServiceAction(System.Func{System.IServiceProvider,`0,System.Threading.CancellationToken,System.Threading.Tasks.Task})">
+            <summary>
+            Add actions that will be executed inside service fabric service RunAsync method
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder`2.AddServiceAction(System.Func{System.IServiceProvider,Microsoft.Omex.Extensions.Hosting.Services.IServiceAction{`0}})">
+            <summary>
+            Add actions that will be executed inside service fabric service RunAsync method
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder`2.AddServiceListener(System.String,System.Func{System.IServiceProvider,`0,Microsoft.ServiceFabric.Services.Communication.Runtime.ICommunicationListener})">
+            <summary>
+            Add service listener to service fabric service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder`2.AddServiceListener(System.Func{System.IServiceProvider,Microsoft.Omex.Extensions.Hosting.Services.IListenerBuilder{`0}})">
+            <summary>
+            Add service listener to service fabric service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder`2.AddServiceAction``1">
+            <summary>
+            Add actions that will be executed inside service fabric service RunAsync method
+            </summary>
+        </member>
+        <member name="M:Microsoft.Omex.Extensions.Hosting.Services.ServiceFabricHostBuilder`2.AddServiceListener``1">
+            <summary>
+            Add service listener to stateless service fabric service
+            </summary>
+        </member>
+    </members>
+</doc>

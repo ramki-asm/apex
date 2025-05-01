@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:APEX.UI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Merge the ResourceDictionary from the APEX.Styles project -->
+        <!--<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/APEX.Styles;component/Styles/styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>-->
+        <!--<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/APEX.Styles;component/Styles/UIColors.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/APEX.Styles;component/Styles/ButtonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>-->
     </Application.Resources>
 </Application>

@@ -7,7 +7,6 @@
         <!--Normal button style-->
         <Setter Property="Height" Value="70"/>
         <Setter Property="Margin" Value="-5,0,0,5"/>
-        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{StaticResource plainTextColor3}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Template">
@@ -39,14 +38,7 @@
         </Style.Triggers>
     </Style>
 
-    <!--Menu button icon-->
-    <Style x:Key="menuButtonIcon" TargetType="fa:IconImage">
-        <Setter Property="Foreground" Value="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
-        <Setter Property="Width" Value="42"/>
-        <Setter Property="Height" Value="52"/>
-        <Setter Property="Margin" Value="35,0,20,0"/>
-    </Style>
-
+   
     <!--Menu button text-->
     <Style x:Key="menuButtonText" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
@@ -81,11 +73,7 @@
         </Style.Triggers>
     </Style>
     <!--Menu button icon-->
-    <Style x:Key="controlButtonIcon" TargetType="fa:IconImage">
-        <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=Button}}"/>
-        <Setter Property="Width" Value="20"/>
-        <Setter Property="Height" Value="20"/>
-    </Style>
+   
     <!--Icon button-->
     <Style x:Key="iconButton" TargetType="Button">
         <!--Normal button style-->
@@ -110,10 +98,5 @@
         </Style.Triggers>
     </Style>
     <!--Menu button icon-->
-    <Style x:Key="iconButtonIcon" TargetType="fa:IconImage">
-        <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=Button}}"/>
-        <Setter Property="Width" Value="25"/>
-        <Setter Property="Height" Value="25"/>
-    </Style>
-
+   
 </ResourceDictionary>

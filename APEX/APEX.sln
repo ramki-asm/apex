@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APEX.UI", "APEX.UI\APEX.UI.csproj", "{0E4351B4-704D-4A25-ABFE-0F778305939A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89} = {B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APEX.Common", "APEX.Common\APEX.Common.csproj", "{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}"
 EndProject
@@ -43,6 +46,7 @@ Global
 		SolutionGuid = {EF764EFF-636F-496B-8E3D-69AF6B2CB03D}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		APEX.Styles\APEX.Styles.projitems*{0e4351b4-704d-4a25-abfe-0f778305939a}*SharedItemsImports = 4
 		APEX.Styles\APEX.Styles.projitems*{6e0c8217-961e-4a2f-922a-a57b713ddb0a}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
