@@ -9,9 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "APEX.Confi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "APEX.Services\Services.csproj", "{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Styles", "APEX.Styles\Styles.shproj", "{6E0C8217-961E-4A2F-922A-A57B713DDB0A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HG_Laser", "..\..\..\Users\A8753\Downloads\Dhanush Docs\Dhanush Docs\WPF\Projects\HG Laser\HG_Laser\HG_Laser\HG_Laser.csproj", "{C7BEADE1-63F6-4D45-A245-0481240A249F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{603DA113-71FA-4B60-BA8D-6EA916DB2A77} = {603DA113-71FA-4B60-BA8D-6EA916DB2A77}
+		{B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89} = {B1121CD3-9E7B-4E90-ABD2-A44BD5EC5B89}
+		{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F} = {BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,8 +44,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF764EFF-636F-496B-8E3D-69AF6B2CB03D}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		APEX.Styles\APEX.Styles.projitems*{6e0c8217-961e-4a2f-922a-a57b713ddb0a}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

@@ -1,2 +1,0 @@
-C:\Code\apex\APEX\APEX.Services\obj\Debug\Services.csproj.AssemblyReference.cache
-C:\Code\apex\APEX\APEX.Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
