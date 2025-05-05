@@ -40,7 +40,6 @@ C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\LoginView.g.cs
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\MainForm.g.cs
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\MainView.g.cs
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\App.g.cs
-C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\UI_MarkupCompile.cache
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\UI_MarkupCompile.lref
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\App.baml
@@ -61,3 +60,16 @@ C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\refint\UI.dll
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\UI.pdb
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\UI.genruntimeconfig.cache
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\ref\UI.dll
+C:\Projects\APEX\HG_Laser\HG_Laser\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Projects\APEX\HG_Laser\HG_Laser\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\SettingView.g.cs
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\SettingView.baml
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\LoginWithUserAccess.g.cs
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\LoginWithUserAccess.baml
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\HolderInfoControl.g.cs
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\HolderInfoControl.baml
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\DashboardView.g.cs
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\ProductionView.g.cs
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\DashboardView.baml
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows\View\ProductionView.baml

@@ -7,16 +7,31 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\DashboardView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\HolderInfoControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\HomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\LoginView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\LoginWithUserAccess.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\MainForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ProductionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SettingView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

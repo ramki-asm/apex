@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Projects\APEX\HG_Laser\HG_Laser\App.xaml
-71459044531
+12777754345
 
-11-704027919
-2111410668769
-MainWindow.xaml;Styles\ButtonStyles.xaml;Styles\UIColors.xaml;View\HomeView.xaml;View\LoginView.xaml;View\MainForm.xaml;View\MainView.xaml;
+231226402411
+213-202717566
+MainWindow.xaml;Styles\ButtonStyles.xaml;Styles\UIColors.xaml;View\DashboardView.xaml;View\HolderInfoControl.xaml;View\HomeView.xaml;View\LoginView.xaml;View\LoginWithUserAccess.xaml;View\MainForm.xaml;View\MainView.xaml;View\ProductionView.xaml;View\SettingView.xaml;
 
 False
 

@@ -5,43 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HG_Laser.View"
         mc:Ignorable="d"
-        Title="MainForm" Height="450" Width="800">
-
+        Title="Customer Management" Height="450" Width="800">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
+        <!-- Search and Action Buttons -->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Horizontal"
-                        VerticalAlignment="Top"
-                        Grid.Column="0">
-                <!--<fa:IconImage Icon="Search" Height="20" Width="20" Foreground="{StaticResource plainTextColor3}"/>-->
-                <TextBox Text="Search..."   
-                    FontSize="13"
-                         Height="24"
-                           Width="300"
-                           Background="Transparent"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"                                                       
-                             BorderThickness="0,0,0,1"                             
-                             VerticalContentAlignment="Center"
-                             Margin="5,5,0,0"></TextBox>
-            </StackPanel>
+
+            <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="13"
+                     Height="24"
+                     Width="300"
+                     Background="Transparent"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"                                                       
+                     BorderThickness="0,0,0,1"                             
+                     VerticalContentAlignment="Center"
+                     Margin="5,5,0,0"/>
+
             <Button Grid.Column="1"
-                            Command="{Binding LoginCommand}"                            
-                            Content="Search"                            
-                            FontSize="12"
-                            FontFamily="Montserrat"
-                            Cursor="Hand"
-                            BorderThickness="0"
-                            Foreground="White"
-                    VerticalAlignment="Top" Margin="0,5,0,0">
+                    Command="{Binding SearchCommand}"
+                    Content="Search"                            
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    BorderThickness="0"
+                    Foreground="White"
+                    VerticalAlignment="Top" 
+                    Margin="0,5,0,0">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="#773DFF"/>
@@ -49,10 +49,10 @@
                             <Setter.Value>
                                 <ControlTemplate TargetType="Button">
                                     <Border Height="30"
-                                                    CornerRadius="15"
-                                                    Background="{TemplateBinding Background}">
+                                            CornerRadius="15"
+                                            Background="{TemplateBinding Background}">
                                         <ContentPresenter VerticalAlignment="Center"
-                                                                      HorizontalAlignment="Center"/>
+                                                          HorizontalAlignment="Center"/>
                                     </Border>
                                 </ControlTemplate>
                             </Setter.Value>
@@ -65,14 +65,54 @@
                     </Style>
                 </Button.Style>
             </Button>
+
+            <Button Grid.Column="2"
+                    Command="{Binding AddCustomerCommand}"
+                    Content="Add Customer"                            
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    BorderThickness="0"
+                    Foreground="White"
+                    VerticalAlignment="Top" 
+                    Margin="0,5,0,0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#462AD8"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Height="30"
+                                            CornerRadius="15"
+                                            Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#28AEED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
         </Grid>
+
+        <!-- Customer DataGrid -->
         <Border Grid.Row="1"
                 Background="#200F53"
                 CornerRadius="10" 
                 Padding="10">
-            <DataGrid ColumnWidth="*"
-                  Background="#200F53"
-                  BorderThickness="0">
+            <DataGrid ItemsSource="{Binding Customers}"
+                      SelectedItem="{Binding SelectedCustomer}"
+                      ColumnWidth="*"
+                      Background="#200F53"
+                      BorderThickness="0"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False">
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="DataGridColumnHeader">
                         <Setter Property="Background" Value="Transparent"/>
@@ -83,16 +123,14 @@
                     </Style>
                 </DataGrid.ColumnHeaderStyle>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID" HeaderStringFormat=""/>
-                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="First name"/>
-                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Last name"/>
-                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Phone"/>
-                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Number"/>
-                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Address"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                    <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+                    <DataGridTextColumn Header="Number" Binding="{Binding Number}"/>
+                    <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
     </Grid>
-
-
 </Window>

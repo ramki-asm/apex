@@ -46,6 +46,8 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=9.0.0.4, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.9.0.4\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
@@ -67,14 +69,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Enums\ApplicationTheme.cs" />
+    <Compile Include="Enums\ControlState.cs" />
     <Compile Include="Enums\NotificationType.cs" />
     <Compile Include="Enums\UserRole.cs" />
     <Compile Include="Extemsion\EnumExtensions.cs" />
     <Compile Include="Extemsion\StringExtensions.cs" />
+    <Compile Include="Helpers\PasswordBoxHelper.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Helpers\ViewModelBase.cs" />
@@ -83,14 +88,20 @@
     <Compile Include="Models\APIResponseModels\ApiResponse.cs" />
     <Compile Include="Models\APIResponseModels\PagedResponse.cs" />
     <Compile Include="Models\AuthenticationResult.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\HolderInfo.cs" />
+    <Compile Include="Models\HolderModel.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\LocalizedString.cs" />
+    <Compile Include="Models\MachineLog.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\Permission.cs" />
+    <Compile Include="Models\ProductionModeModel.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\RolePermission.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAccountModel.cs" />
     <Compile Include="Models\Validations\ValidationError.cs" />
     <Compile Include="Models\Validations\ValidationResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

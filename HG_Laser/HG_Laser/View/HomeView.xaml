@@ -7,9 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-
-    <Grid  Background="{StaticResource panelActiveColor}">
-        <!--Inside 1st Section-->
+    <Grid Background="{StaticResource panelActiveColor}">
+        <!-- Inside 1st Section -->
         <Grid Grid.Column="0" Margin="10" Background="{StaticResource panelActiveColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
@@ -18,338 +17,231 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!--Production Mode-->
+            <!-- Production Mode -->
             <Grid Grid.Row="0">
                 <StackPanel VerticalAlignment="Center"
-                                            Background="Yellow">
-                    <TextBlock Text="PRODUCTION MODE"
-                                       Foreground="Black"
-                                       FontSize="25"
-                                       FontFamily="Montserrat"
-                                       FontWeight="Medium" 
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                               
-                                       />
+                            Background="Yellow">
+                    <TextBlock Text="{Binding ProductionMode.ModeName}"
+                               Foreground="Black"
+                               FontSize="25"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
                 </StackPanel>
-
             </Grid>
 
-            <!--Inner 1st Section 2nd Row-->
+            <!-- Inner 1st Section 2nd Row -->
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <!--Inside 1st Section  1st Block-->
+                    <!-- Holder 1 -->
                     <ColumnDefinition Width="*"/>
-                    <!--Inside 2nd Section 2nd Block-->
+                    <!-- Holder 2 -->
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <!--Inside 1st Section  1st Block-->
+                <!-- Holder 1 -->
                 <Grid Grid.Column="0">
-
-                    <StackPanel Orientation="Vertical"
-                                                >
-                        <Label Content="Holder 1"
-                                           Foreground="{StaticResource titleColor2}"
-                                           FontSize="23"
-                                           FontFamily="Montserrat"
-                                           FontWeight="Medium"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="Center"
-                                           HorizontalContentAlignment="Center"
-                                           VerticalContentAlignment="Center"
-                                        />
-                        <Label Content="SN :"
-                                           Foreground="{StaticResource titleColor2}"
-                                           FontSize="18"
-                                           FontFamily="Montserrat"
-                                           FontWeight="Light"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="left"
-                                           HorizontalContentAlignment="Center"
-                                           VerticalContentAlignment="Center"
-                                        />
-                        <Label Content="Color :"
-                                            Foreground="{StaticResource titleColor2}"
-                                            FontSize="18"
-                                            FontFamily="Montserrat"
-                                            FontWeight="Light"
-                                            VerticalAlignment="Center"
-                                            HorizontalAlignment="left"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalContentAlignment="Center"
-                                         />
-
-                        <Label Content="MPN :"
-                                           Foreground="{StaticResource titleColor2}"
-                                           FontSize="18"
-                                           FontFamily="Montserrat"
-                                           FontWeight="Light"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="left"
-                                           HorizontalContentAlignment="Center"
-                                           VerticalContentAlignment="Center"
-                                        />
-                        <Label Content="IMEI :"
-                                            Foreground="{StaticResource titleColor2}"
-                                            FontSize="18"
-                                            FontFamily="Montserrat"
-                                            FontWeight="Light"
-                                            VerticalAlignment="Center"
-                                            HorizontalAlignment="left"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalContentAlignment="Center"
-                                         />
-
-                        <Label Content="Artwork :"
-                                            Foreground="{StaticResource titleColor2}"
-                                            FontSize="18"
-                                            FontFamily="Montserrat"
-                                            FontWeight="Light"
-                                            VerticalAlignment="Center"
-                                            HorizontalAlignment="left"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalContentAlignment="Center"
-                                         />
-
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="{Binding Holders[0].HolderName}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="23"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Medium"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+                        <Label Content="{Binding Holders[0].SerialNumber, StringFormat='SN: {0}'}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="18"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Light"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[0].Color, StringFormat='Color: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[0].MPN, StringFormat='MPN: {0}'}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="18"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Light"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[0].IMEI, StringFormat='IMEI: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[0].Artwork, StringFormat='Artwork: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
                     </StackPanel>
-
                 </Grid>
 
-                <!--Inside 1st Section  2nd Block-->
+                <!-- Holder 2 -->
                 <Grid Grid.Column="1">
-
-                    <StackPanel Orientation="Vertical"
-                >
-                        <Label Content="Holder 2"
-                                           Foreground="{StaticResource titleColor2}"
-                                           FontSize="23"
-                                           FontFamily="Montserrat"
-                                           FontWeight="Medium"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="Center"
-                                           HorizontalContentAlignment="Center"
-                                           VerticalContentAlignment="Center"
-                                        />
-                        <Label Content="SN :"
-                                           Foreground="{StaticResource titleColor2}"
-                                           FontSize="18"
-                                           FontFamily="Montserrat"
-                                           FontWeight="Light"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="left"
-                                           HorizontalContentAlignment="Center"
-                                           VerticalContentAlignment="Center"
-                                        />
-                        <Label Content="Color :"
-                                            Foreground="{StaticResource titleColor2}"
-                                            FontSize="18"
-                                            FontFamily="Montserrat"
-                                            FontWeight="Light"
-                                            VerticalAlignment="Center"
-                                            HorizontalAlignment="left"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalContentAlignment="Center"
-                                         />
-
-                        <Label Content="MPN :"
-                                           Foreground="{StaticResource titleColor2}"
-                                           FontSize="18"
-                                           FontFamily="Montserrat"
-                                           FontWeight="Light"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="left"
-                                           HorizontalContentAlignment="Center"
-                                           VerticalContentAlignment="Center"
-                                        />
-                        <Label Content="IMEI :"
-                                            Foreground="{StaticResource titleColor2}"
-                                            FontSize="18"
-                                            FontFamily="Montserrat"
-                                            FontWeight="Light"
-                                            VerticalAlignment="Center"
-                                            HorizontalAlignment="left"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalContentAlignment="Center"
-                                         />
-
-                        <Label Content="Artwork :"
-                                            Foreground="{StaticResource titleColor2}"
-                                            FontSize="18"
-                                            FontFamily="Montserrat"
-                                            FontWeight="Light"
-                                            VerticalAlignment="Center"
-                                            HorizontalAlignment="left"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalContentAlignment="Center"
-                                         />
-
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="{Binding Holders[1].HolderName}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="23"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Medium"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+                        <Label Content="{Binding Holders[1].SerialNumber, StringFormat='SN: {0}'}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="18"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Light"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[1].Color, StringFormat='Color: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[1].MPN, StringFormat='MPN: {0}'}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="18"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Light"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[1].IMEI, StringFormat='IMEI: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[1].Artwork, StringFormat='Artwork: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
                     </StackPanel>
-
                 </Grid>
-
             </Grid>
 
-            <!--Inner 1st Section 3rd Row-->
+            <!-- Inner 1st Section 3rd Row -->
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <!--Inside 1st Section  1st Block-->
+                    <!-- Holder 3 -->
                     <ColumnDefinition Width="*"/>
-                    <!--Inside 2nd Section 2nd Block-->
+                    <!-- Holder 4 -->
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <!--Inside 1st Section  3rd Block-->
+                <!-- Holder 3 -->
                 <Grid Grid.Column="0">
-
-                    <StackPanel Orientation="Vertical"
-                                >
-                        <Label Content="Holder 3"
-                           Foreground="{StaticResource titleColor2}"
-                           FontSize="23"
-                           FontFamily="Montserrat"
-                           FontWeight="Medium"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           HorizontalContentAlignment="Center"
-                           VerticalContentAlignment="Center"
-                        />
-                        <Label Content="SN :"
-                           Foreground="{StaticResource titleColor2}"
-                           FontSize="18"
-                           FontFamily="Montserrat"
-                           FontWeight="Light"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="left"
-                           HorizontalContentAlignment="Center"
-                           VerticalContentAlignment="Center"
-                        />
-                        <Label Content="Color :"
-                            Foreground="{StaticResource titleColor2}"
-                            FontSize="18"
-                            FontFamily="Montserrat"
-                            FontWeight="Light"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="left"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                         />
-
-                        <Label Content="MPN :"
-                           Foreground="{StaticResource titleColor2}"
-                           FontSize="18"
-                           FontFamily="Montserrat"
-                           FontWeight="Light"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="left"
-                           HorizontalContentAlignment="Center"
-                           VerticalContentAlignment="Center"
-                        />
-                        <Label Content="IMEI :"
-                            Foreground="{StaticResource titleColor2}"
-                            FontSize="18"
-                            FontFamily="Montserrat"
-                            FontWeight="Light"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="left"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                         />
-
-                        <Label Content="Artwork :"
-                            Foreground="{StaticResource titleColor2}"
-                            FontSize="18"
-                            FontFamily="Montserrat"
-                            FontWeight="Light"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="left"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                         />
-
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="{Binding Holders[2].HolderName}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="23"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Medium"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+                        <Label Content="{Binding Holders[2].SerialNumber, StringFormat='SN: {0}'}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="18"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Light"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[2].Color, StringFormat='Color: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[2].MPN, StringFormat='MPN: {0}'}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="18"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Light"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[2].IMEI, StringFormat='IMEI: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[2].Artwork, StringFormat='Artwork: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
                     </StackPanel>
-
                 </Grid>
 
-                <!--Inside 1st Section  4th Block-->
+                <!-- Holder 4 -->
                 <Grid Grid.Column="1">
-
-                    <StackPanel Orientation="Vertical"
->
-                        <Label Content="Holder 4"
-                           Foreground="{StaticResource titleColor2}"
-                           FontSize="23"
-                           FontFamily="Montserrat"
-                           FontWeight="Medium"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           HorizontalContentAlignment="Center"
-                           VerticalContentAlignment="Center"
-                        />
-                        <Label Content="SN :"
-                           Foreground="{StaticResource titleColor2}"
-                           FontSize="18"
-                           FontFamily="Montserrat"
-                           FontWeight="Light"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="left"
-                           HorizontalContentAlignment="Center"
-                           VerticalContentAlignment="Center"
-                        />
-                        <Label Content="Color :"
-                            Foreground="{StaticResource titleColor2}"
-                            FontSize="18"
-                            FontFamily="Montserrat"
-                            FontWeight="Light"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="left"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                         />
-
-                        <Label Content="MPN :"
-                           Foreground="{StaticResource titleColor2}"
-                           FontSize="18"
-                           FontFamily="Montserrat"
-                           FontWeight="Light"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="left"
-                           HorizontalContentAlignment="Center"
-                           VerticalContentAlignment="Center"
-                        />
-                        <Label Content="IMEI :"
-                            Foreground="{StaticResource titleColor2}"
-                            FontSize="18"
-                            FontFamily="Montserrat"
-                            FontWeight="Light"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="left"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                         />
-
-                        <Label Content="Artwork :"
-                            Foreground="{StaticResource titleColor2}"
-                            FontSize="18"
-                            FontFamily="Montserrat"
-                            FontWeight="Light"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="left"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                         />
-
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="{Binding Holders[3].HolderName}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="23"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Medium"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+                        <Label Content="{Binding Holders[3].SerialNumber, StringFormat='SN: {0}'}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="18"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Light"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[3].Color, StringFormat='Color: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[3].MPN, StringFormat='MPN: {0}'}"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="18"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Light"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[3].IMEI, StringFormat='IMEI: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                        <Label Content="{Binding Holders[3].Artwork, StringFormat='Artwork: {0}'}"
+                                    Foreground="{StaticResource titleColor2}"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    FontWeight="Light"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
                     </StackPanel>
-
                 </Grid>
-
             </Grid>
-
-
-
-
-
         </Grid>
-
     </Grid>
 </UserControl>

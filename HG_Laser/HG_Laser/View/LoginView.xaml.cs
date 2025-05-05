@@ -1,27 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using HG_Laser.ViewModel;
 
 namespace HG_Laser.View
 {
-    /// <summary>
-    /// Interaction logic for LoginView.xaml
-    /// </summary>
     public partial class LoginView : Window
     {
         public LoginView()
         {
             InitializeComponent();
+            DataContext =new ViewModel.LoginViewModel();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -30,19 +18,12 @@ namespace HG_Laser.View
                 DragMove();
         }
 
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        private void txtPass_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-
+            if (DataContext is LoginViewModel vm)
+            {
+                vm.Password = txtPass.Password;
+            }
         }
 
     }
