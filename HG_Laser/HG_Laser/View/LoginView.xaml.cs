@@ -1,15 +1,15 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-using HG_Laser.ViewModel;
+using UI.ViewModels;
 
-namespace HG_Laser.View
+namespace UI.View
 {
     public partial class LoginView : Window
     {
         public LoginView()
         {
             InitializeComponent();
-            DataContext =new ViewModel.LoginViewModel();
+            DataContext =new ViewModels.SettingsViewModel();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

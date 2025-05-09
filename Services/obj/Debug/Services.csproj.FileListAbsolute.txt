@@ -121,6 +121,8 @@ C:\Code\apex\APEX\APEX.Services\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Code\apex\APEX\APEX.Services\obj\Debug\Services.csproj.Up2Date
 C:\Code\apex\APEX\APEX.Services\obj\Debug\Services.dll
 C:\Code\apex\APEX\APEX.Services\obj\Debug\Services.pdb
+C:\Projects\APEX\Services\obj\Debug\Services.csproj.AssemblyReference.cache
+C:\Projects\APEX\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
 C:\Projects\APEX\Services\bin\Debug\roslyn\csc.exe
 C:\Projects\APEX\Services\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Projects\APEX\Services\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -166,8 +168,8 @@ C:\Projects\APEX\Services\bin\Debug\System.Text.Encodings.Web.xml
 C:\Projects\APEX\Services\bin\Debug\System.Text.Json.xml
 C:\Projects\APEX\Services\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Projects\APEX\Services\bin\Debug\System.ValueTuple.xml
-C:\Projects\APEX\Services\obj\Debug\Services.csproj.AssemblyReference.cache
-C:\Projects\APEX\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
 C:\Projects\APEX\Services\obj\Debug\Services.csproj.Up2Date
 C:\Projects\APEX\Services\obj\Debug\Services.dll
 C:\Projects\APEX\Services\obj\Debug\Services.pdb
+C:\Projects\APEX\Services\bin\Debug\System.IO.Ports.dll
+C:\Projects\APEX\Services\bin\Debug\System.IO.Ports.xml

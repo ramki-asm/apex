@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Enums\ApplicationTheme.cs" />
+    <Compile Include="Enums\ConnectionStatus.cs" />
     <Compile Include="Enums\ControlState.cs" />
     <Compile Include="Enums\NotificationType.cs" />
     <Compile Include="Enums\UserRole.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Models\APIResponseModels\PagedResponse.cs" />
     <Compile Include="Models\AuthenticationResult.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\EthernetSettings.cs" />
     <Compile Include="Models\HolderInfo.cs" />
     <Compile Include="Models\HolderModel.cs" />
     <Compile Include="Models\Language.cs" />
@@ -100,6 +102,9 @@
     <Compile Include="Models\ProductionModeModel.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\RolePermission.cs" />
+    <Compile Include="Models\SerialConnectionSettings.cs" />
+    <Compile Include="Models\TcpIpConnectionSettings.cs" />
+    <Compile Include="Models\UsbDeviceInfo.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserAccountModel.cs" />
     <Compile Include="Models\Validations\ValidationError.cs" />

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HG_Laser.View
+namespace UI.View
 {
     /// <summary>
     /// Interaction logic for HomeView.xaml

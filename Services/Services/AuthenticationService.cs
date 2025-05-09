@@ -4,7 +4,7 @@ using Services.Interfaces;
 using System;
 using System.Threading.Tasks;
 
-namespace APEX.Services.Services
+namespace Services.Services
 {
     public class AuthenticationService : IAuthenticationService
     {

@@ -1,12 +1,31 @@
 {
   "version": 2,
-  "dgSpecHash": "3dH9rxBIR2E=",
+  "dgSpecHash": "Tlq+Cb56AXs=",
   "success": true,
-  "projectFilePath": "C:\\Projects\\APEX\\HG_Laser\\HG_Laser\\UI.csproj",
+  "projectFilePath": "C:\\Projects\\APEX\\HG_Laser\\HG_Laser\\UserInterface.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A8753\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
     "C:\\Users\\A8753\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.4\\microsoft.extensions.dependencyinjection.9.0.4.nupkg.sha512",
-    "C:\\Users\\A8753\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.4\\microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512"
+    "C:\\Users\\A8753\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.4\\microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.135\\microsoft.xaml.behaviors.wpf.1.1.135.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.android-arm.runtime.native.system.io.ports\\9.0.4\\runtime.android-arm.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.android-arm64.runtime.native.system.io.ports\\9.0.4\\runtime.android-arm64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.android-x64.runtime.native.system.io.ports\\9.0.4\\runtime.android-x64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.android-x86.runtime.native.system.io.ports\\9.0.4\\runtime.android-x86.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\9.0.4\\runtime.linux-arm.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\9.0.4\\runtime.linux-arm64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.linux-bionic-arm64.runtime.native.system.io.ports\\9.0.4\\runtime.linux-bionic-arm64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.linux-bionic-x64.runtime.native.system.io.ports\\9.0.4\\runtime.linux-bionic-x64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.linux-musl-arm.runtime.native.system.io.ports\\9.0.4\\runtime.linux-musl-arm.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.linux-musl-arm64.runtime.native.system.io.ports\\9.0.4\\runtime.linux-musl-arm64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.linux-musl-x64.runtime.native.system.io.ports\\9.0.4\\runtime.linux-musl-x64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\9.0.4\\runtime.linux-x64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.maccatalyst-arm64.runtime.native.system.io.ports\\9.0.4\\runtime.maccatalyst-arm64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.maccatalyst-x64.runtime.native.system.io.ports\\9.0.4\\runtime.maccatalyst-x64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.native.system.io.ports\\9.0.4\\runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\9.0.4\\runtime.osx-arm64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\9.0.4\\runtime.osx-x64.runtime.native.system.io.ports.9.0.4.nupkg.sha512",
+    "C:\\Users\\A8753\\.nuget\\packages\\system.io.ports\\9.0.4\\system.io.ports.9.0.4.nupkg.sha512"
   ],
   "logs": []
 }

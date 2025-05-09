@@ -23,6 +23,7 @@ namespace UI.View
         public SettingView()
         {
             InitializeComponent();
+            DataContext= new ViewModels.SettingsViewModel();
         }
     }
 }

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configurat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{BC6FC623-0EF2-43BE-BBFF-5C1D9550FA2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "HG_Laser\HG_Laser\UI.csproj", "{7EF37589-6AFC-F3D5-D0FE-584E26D48919}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "HG_Laser\HG_Laser\UserInterface.csproj", "{7EF37589-6AFC-F3D5-D0FE-584E26D48919}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

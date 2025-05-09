@@ -61,6 +61,9 @@
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.2\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.Ports, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Ports.9.0.4\lib\net462\System.IO.Ports.dll</HintPath>
+    </Reference>
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -99,8 +102,10 @@
     <Compile Include="Interfaces\IAuthenticationService.cs" />
     <Compile Include="Interfaces\ILocalizationService.cs" />
     <Compile Include="Interfaces\INavigationService.cs" />
+    <Compile Include="Interfaces\Interface1.cs" />
     <Compile Include="Interfaces\IPasswordHasher.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\ISerialPortService.cs" />
     <Compile Include="Interfaces\ITokenService.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
@@ -114,6 +119,7 @@
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\PasswordHasher.cs" />
     <Compile Include="Services\Repository.cs" />
+    <Compile Include="Services\SerialPortService.cs" />
     <Compile Include="Services\TokenService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Startup.cs" />

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:UI.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Background="{StaticResource panelActiveColor}">
         <TextBlock Text="PRODUCTION MODE" Background="Yellow" FontWeight="Bold" FontSize="20"
                HorizontalAlignment="Center" Margin="10"/>
         <ItemsControl ItemsSource="{Binding Holders}" Margin="0,50,0,0">

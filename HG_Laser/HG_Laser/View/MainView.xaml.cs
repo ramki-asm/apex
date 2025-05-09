@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace HG_Laser.View
+namespace UI.View
 {
     /// <summary>
     /// Interaction logic for MainView.xaml
@@ -25,6 +25,7 @@ namespace HG_Laser.View
         {
             InitializeComponent();
             //var homeView = new HomeView();
+            DataContext = new ViewModels.MainViewModel();   
         }
 
         [DllImport("user32.dll")]

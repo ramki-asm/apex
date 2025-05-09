@@ -3,13 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:UI.View"
-             xmlns:vm="clr-namespace:HG_Laser.ViewModel"
+             xmlns:vm="clr-namespace:UI.ViewModels"
+             xmlns:view="clr-namespace:UI.View"
+            xmlns:local="clr-namespace:UI.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.DataContext>
-        <vm:SettingViewModel/>
-    </UserControl.DataContext>
+    
        
      <Grid Background="{StaticResource panelActiveColor}" >
         <Grid.ColumnDefinitions>
@@ -18,11 +17,11 @@
 
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Orientation="Vertical">
-            <Button Background="{StaticResource panelActiveColor}" Margin="0,250,0,0" Content="Manual Mode" BorderThickness="1" Foreground="White" Width="150" Height="30" FontSize="18" FontWeight="Bold"/>
-            <Button Background="{StaticResource panelActiveColor}" Content="Auto Mode"   BorderThickness="1" Foreground="White" Width="150" Height="30" FontSize="18" FontWeight="Bold"/>
+            <Button Background="{StaticResource panelActiveColor}" Margin="0,250,0,0" Content="Manual Mode" BorderThickness="1" Foreground="Black" Width="150" Height="30" FontSize="18" FontWeight="Bold"/>
+            <Button Background="{StaticResource panelActiveColor}" Content="Auto Mode"   BorderThickness="1" Foreground="Black" Width="150" Height="30" FontSize="18" FontWeight="Bold"/>
         </StackPanel>
         <Grid Grid.Column="1">
-            <local:LoginWithUserAccess/>
+            <view:LoginWithUserAccess/>
         </Grid>
     </Grid>
 </UserControl>

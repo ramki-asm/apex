@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace HG_Laser.View
+namespace UI.View
 {
     /// <summary>
     /// Interaction logic for MainForm.xaml

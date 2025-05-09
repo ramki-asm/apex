@@ -5,29 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UI.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="1400">
+             d:DesignHeight="600" d:DesignWidth="1400">
     <UserControl.Resources>
         <ResourceDictionary>
             <Style x:Key="LabelWithWhiteBackground" TargetType="Label">
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Width" Value="120"/>
                 <Setter Property="Height" Value="28"/>
-                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Margin" Value="4"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="FontSize" Value="12"/>
-
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontWeight" Value="Bold"/>
             </Style>
             <Style x:Key="HeaderLabelWithWhiteBackground" TargetType="Label">
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Width" Value="180"/>
                 <Setter Property="Height" Value="35"/>
                 <Setter Property="Margin" Value="5"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
                 <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontWeight" Value="Bold"/>
 
             </Style>
             <Style x:Key="ListboxWithWhiteBackground" TargetType="ListBox">
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Width" Value="500"/>
                 <Setter Property="Height" Value="250"/>
                 <Setter Property="Margin" Value="5"/>
@@ -35,7 +36,7 @@
             </Style>
             <Style x:Key="ComboBoxWithWhiteBackground" TargetType="ComboBox">
                 <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Background" Value="White"/>
+                <Setter Property="Background" Value="#D6F0F7"/>
                 <Setter Property="Width" Value="140"/>
                 <Setter Property="Height" Value="30"/>
                 <Setter Property="Margin" Value="5,5,0,5"/>
@@ -43,14 +44,15 @@
                 
             </Style>
             <Style x:Key="TextboxWithWhiteBackground" TargetType="TextBox">
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="Width" Value="140"/>
-                <Setter Property="Margin" Value="5,5,0,5"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="Width" Value="200"/>
+                <Setter Property="Margin" Value="0,5,0,0"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
                 <Setter Property="Height" Value="30"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
             </Style>
             <Style x:Key="TextblockWithWhiteBackground" TargetType="TextBlock">
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Width" Value="140"/>
                 <Setter Property="Margin" Value="5,5,0,5"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -58,7 +60,7 @@
             </Style>
             <Style x:Key="ButtonboxWithWhiteBackground" TargetType="Button">
                 <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Width" Value="140"/>
                 <Setter Property="Margin" Value="5,5,0,5"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -67,7 +69,7 @@
             </Style>
             <Style x:Key="BigButtonboxWithWhiteBackground" TargetType="Button">
                 <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
-                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="Width" Value="140"/>
                 <Setter Property="Margin" Value="5,5,0,5"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -110,7 +112,7 @@
                     </StackPanel>
                 </Border>
                 <Border BorderBrush="White" BorderThickness="1" Grid.Row="2" Margin="10" Width="600" HorizontalAlignment="Left">
-                    <StackPanel Grid.Row="2" Grid.Column="0" Margin="0,0,0,0" Orientation="Vertical" Height="250">
+                    <StackPanel Grid.Row="2" Grid.Column="0" Margin="0,0,0,0" Orientation="Vertical">
                         <Label Content="Count:" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -124,11 +126,16 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Content="Total Count:" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}" Height="30"/>
+                            <Label Content="Total Count:" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource TextboxWithWhiteBackground}"/>
                             <Label Content="Tossing:" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextboxWithWhiteBackground}"/>
                             <Label Content="Ok Count:" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextboxWithWhiteBackground}"/>
                             <Label Content="Cycle Time:" Grid.Row="0" Grid.Column="2" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource TextboxWithWhiteBackground}"/>
                             <Label Content="Lead Time" Grid.Row="1" Grid.Column="2" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <TextBox Grid.Row="1" Grid.Column="5" Style="{StaticResource TextboxWithWhiteBackground}"/>
 
                         </Grid>
                     </StackPanel>
@@ -136,7 +143,7 @@
                 <Border BorderBrush="White" BorderThickness="1" Grid.Row="3" Margin="10" Width="600" HorizontalAlignment="Left">
 
                     <StackPanel Grid.Row="1" Grid.Column="0" Margin="10" Orientation="Vertical">
-                        <Label Content="Logs:" HorizontalAlignment="Left" Margin="5" Foreground="White" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
+                        <Label Content="Logs:" HorizontalAlignment="Left" Margin="5" Foreground="Black" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
                         <ListBox Style="{StaticResource ListboxWithWhiteBackground}" Height="200" HorizontalAlignment="Left" Margin="5"/>
                     </StackPanel>
                 </Border>
@@ -188,9 +195,9 @@
                     <Label Content="Controls:" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <Button Content="▶ Start" Command="{Binding StartCommand}" Margin="5" Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="Green"/>
-                            <Button Content="⏸ Pause" Command="{Binding PauseCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="LightBlue"/>
+                                <Button Content="⏸ Pause" Command="{Binding PauseCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="#79C2D0"/>
                             <Button Content="⏹ Stop" Command="{Binding StopCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="Red"/>
-                            <Button Content="🔁 Reset" Command="{Binding ResetCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="LightBlue"/>
+                                <Button Content="🔁 Reset" Command="{Binding ResetCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="#A0C8D0"/>
                         </StackPanel>
                         <!--<Image Source="/Resources/Images/animation.gif" Height="100" Margin="10"/>-->
                     </StackPanel>
