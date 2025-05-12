@@ -38,6 +38,11 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_ShowErrorsInErrorList = False
+		RESX_ShowPerformanceTraces = True
 		SolutionGuid = {EF764EFF-636F-496B-8E3D-69AF6B2CB03D}
+		RESX_NeutralResourcesLanguage = en-GB
+		RESX_AutoCreateNewLanguageFiles = True
+		RESX_AutoApplyExistingTranslations = True
 	EndGlobalSection
 EndGlobal

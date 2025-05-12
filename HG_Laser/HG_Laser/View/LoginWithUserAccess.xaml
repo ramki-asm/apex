@@ -3,49 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:properties="clr-namespace:UI.Resources"
              xmlns:local="clr-namespace:UI.View"
-             mc:Ignorable="d" Width="300" Height="150"
+             mc:Ignorable="d" Width="350" Height="170"
             >
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <Style x:Key="LabelWithWhiteBackground" TargetType="Label">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="80"/>
-                <Setter Property="Height" Value="30"/>
-                <Setter Property="Margin" Value="5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="FontWeight" Value="Bold"/>
-
-            </Style>
-            <Style x:Key="ComboBoxWithWhiteBackground" TargetType="ComboBox">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Background" Value="White"/>
-                <Setter Property="Width" Value="140"/>
-                <Setter Property="Height" Value="30"/>
-                <Setter Property="Margin" Value="5,5,0,5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-            </Style>
-            <Style x:Key="TextboxWithWhiteBackground" TargetType="TextBox">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="140"/>
-                <Setter Property="Margin" Value="5,5,0,5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Height" Value="30"/>
-            </Style>
-            <Style x:Key="ButtonboxWithWhiteBackground" TargetType="Button">
-                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="140"/>
-                <Setter Property="Margin" Value="5,5,0,5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Height" Value="25"/>
-            </Style>
-            <Style x:Key="ComboBoxItemsWithWhiteBackground" TargetType="ComboBoxItem">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-            </Style>
-        </ResourceDictionary>
-    </UserControl.Resources>
+   
     <Border BorderBrush="White" BorderThickness="1">
 
         <Grid Background="{StaticResource panelActiveColor}">
@@ -60,22 +22,22 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Content="Select Access level:" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
-            <Label Content="User Name:" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
-            <Label Content="Password:" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+            <Label Content="{Binding Source={x:Static properties:Strings.LoginWithUserAccessAccess}}" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+            <Label Content="{Binding Source={x:Static properties:Strings.LoginWithUserAccessAccessUserName}}" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+            <Label Content="{Binding Source={x:Static properties:Strings.LoginWithUserAccessAccessPassword}}" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
             <ComboBox Grid.Row="0" Grid.Column="1" Style="{StaticResource ComboBoxWithWhiteBackground}">
                 <ComboBox.Items>
-                    <ComboBoxItem Content="Administrator" Style="{StaticResource ComboBoxItemsWithWhiteBackground}"/>
-                    <ComboBoxItem Content="User" Style="{StaticResource ComboBoxItemsWithWhiteBackground}"/>
-                    <ComboBoxItem Content="Guest" Style="{StaticResource ComboBoxItemsWithWhiteBackground}"/>
-                    <ComboBoxItem Content="Technician" Style="{StaticResource ComboBoxItemsWithWhiteBackground}"/>
+                    <ComboBoxItem Content="{Binding Source={x:Static properties:Strings.LoginWithUserAccessAccessCBItemAdministrator}}" Style="{StaticResource ComboBoxItemsWithWhiteBackground}"/>
+                    <ComboBoxItem Content="{Binding Source={x:Static properties:Strings.LoginWithUserAccessAccessCBItemGuest}}" Style="{StaticResource ComboBoxItemsWithWhiteBackground}"/>
+                    <ComboBoxItem Content="{Binding Source={x:Static properties:Strings.LoginWithUserAccessAccessCBItemTechnicial}}" Style="{StaticResource ComboBoxItemsWithWhiteBackground}"/>
+                    <ComboBoxItem Content="{Binding Source={x:Static properties:Strings.LoginWithUserAccessAccessCBItemUser}}" Style="{StaticResource ComboBoxItemsWithWhiteBackground}"/>
                 </ComboBox.Items>
             </ComboBox>
             <TextBox  Grid.Row="1" Grid.Column="1" Style="{StaticResource TextboxWithWhiteBackground}"/>
             <TextBox  Grid.Row="2" Grid.Column="1" Style="{StaticResource TextboxWithWhiteBackground}"/>
             <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Content="Cancel"  Margin="0,5,0,5" Style="{StaticResource  ButtonboxWithWhiteBackground}" />
-                <Button Content="Submit"  Margin="5,5,0,5" Style="{StaticResource  ButtonboxWithWhiteBackground}" Command="{Binding _loginComman}"/>
+                <Button Content="Submit"  Margin="5,5,0,5" Style="{StaticResource  ButtonboxWithWhiteBackground}" Command="{Binding _loginComman, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </Grid>
     </Border>

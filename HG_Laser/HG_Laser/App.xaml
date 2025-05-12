@@ -11,6 +11,12 @@ xmlns:view="clr-namespace:UI.View"
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Styles/UIColors.xaml"/>
                 <ResourceDictionary Source="/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/LabelStyle.xaml"/>
+                <ResourceDictionary Source="/Styles/TextBox.xaml"/>
+                <ResourceDictionary Source="/Styles/ListBox.xaml"/>
+                <ResourceDictionary Source="/Styles/ComboBox.xaml"/>
+                <ResourceDictionary Source="/Styles/TabControl.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
         <DataTemplate DataType="{x:Type vm:HomeViewModel}">
             <controls:DashboardView/>

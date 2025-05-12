@@ -30,9 +30,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CodingSeb.Localization.WPF" Version="1.4.0" />
+    <PackageReference Include="CodingSebLocalization.Fody" Version="1.4.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.4" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.22.0" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Nittin.Localizator" Version="1.1.1" />
     <PackageReference Include="System.IO.Ports" Version="9.0.4" />
   </ItemGroup>
 
@@ -88,17 +92,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Language.Designer.cs">
+    <Compile Update="Resources\Strings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Language.resx</DependentUpon>
+      <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Language.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Resources\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>UI.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Strings.zh-CN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>UI.Resources</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
 

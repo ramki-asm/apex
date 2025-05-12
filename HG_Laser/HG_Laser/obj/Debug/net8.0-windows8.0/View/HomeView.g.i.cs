@@ -9,6 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using CodingSeb.Localization.WPF;
 using System;
 using System.Diagnostics;
 using System.Windows;

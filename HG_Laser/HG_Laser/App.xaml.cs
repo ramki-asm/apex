@@ -26,7 +26,7 @@ namespace UI
             services.AddSingleton<LoginViewModel>();
             services.AddSingleton<MainViewModel>();
             services.AddTransient<SettingsViewModel>();
-
+           
             // Services
             services.AddSingleton<ISerialPortService,SerialPortService>(); 
             services.AddSingleton<ITcpIpService, TcpIpService>();
@@ -46,7 +46,7 @@ namespace UI
         }
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            var loginView = Services.GetRequiredService<LoginView>();
+            var loginView = Services.GetRequiredService<MainView>();
             loginView.Show();
         }
     }

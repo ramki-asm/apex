@@ -13,7 +13,7 @@ namespace UI.View
         public LoginWithUserAccess()
         {
             InitializeComponent();
-            DataContext = new LoginWithUserAccessViewModel();
+         //   DataContext = new LoginWithUserAccessViewModel();
         }
     }
 }

@@ -65,7 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Configurations\ApplicationSettings.cs" />
     <Compile Include="Configurations\DatabaseConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

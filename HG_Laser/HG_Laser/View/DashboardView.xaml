@@ -4,85 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UI.View"
+             xmlns:properties="clr-namespace:UI.Resources"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1400">
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <Style x:Key="LabelWithWhiteBackground" TargetType="Label">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="120"/>
-                <Setter Property="Height" Value="28"/>
-                <Setter Property="Margin" Value="4"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="FontSize" Value="15"/>
-                <Setter Property="FontWeight" Value="Bold"/>
-            </Style>
-            <Style x:Key="HeaderLabelWithWhiteBackground" TargetType="Label">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="180"/>
-                <Setter Property="Height" Value="35"/>
-                <Setter Property="Margin" Value="5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="FontSize" Value="18"/>
-                <Setter Property="FontWeight" Value="Bold"/>
-
-            </Style>
-            <Style x:Key="ListboxWithWhiteBackground" TargetType="ListBox">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="500"/>
-                <Setter Property="Height" Value="250"/>
-                <Setter Property="Margin" Value="5"/>
-                <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            </Style>
-            <Style x:Key="ComboBoxWithWhiteBackground" TargetType="ComboBox">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Background" Value="#D6F0F7"/>
-                <Setter Property="Width" Value="140"/>
-                <Setter Property="Height" Value="30"/>
-                <Setter Property="Margin" Value="5,5,0,5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                
-            </Style>
-            <Style x:Key="TextboxWithWhiteBackground" TargetType="TextBox">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="200"/>
-                <Setter Property="Margin" Value="0,5,0,0"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Height" Value="30"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-            </Style>
-            <Style x:Key="TextblockWithWhiteBackground" TargetType="TextBlock">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="140"/>
-                <Setter Property="Margin" Value="5,5,0,5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Height" Value="30"/>
-            </Style>
-            <Style x:Key="ButtonboxWithWhiteBackground" TargetType="Button">
-                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="140"/>
-                <Setter Property="Margin" Value="5,5,0,5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Height" Value="30"/>
-                <Setter Property="FontSize" Value="20"/>
-            </Style>
-            <Style x:Key="BigButtonboxWithWhiteBackground" TargetType="Button">
-                <Setter Property="Background" Value="{StaticResource panelActiveColor}"/>
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="Width" Value="140"/>
-                <Setter Property="Margin" Value="5,5,0,5"/>
-                <Setter Property="HorizontalAlignment" Value="Center"/>
-                <Setter Property="Height" Value="125"/>
-                <Setter Property="FontSize" Value="25"/>
-
-            </Style>
-            <Style x:Key="ComboBoxItemsWithWhiteBackground" TargetType="ComboBoxItem">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-            </Style>
-        </ResourceDictionary>
-    </UserControl.Resources>
+   
     <Grid Background="{StaticResource panelActiveColor}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -102,18 +27,18 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,-20,0,0" Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <Label Content="Product" Style="{StaticResource LabelWithWhiteBackground}"/>
+                    <Label Content="{Binding Source={x:Static properties:Strings.DashBoardProductLabel}}" Style="{StaticResource LabelWithWhiteBackground}"/>
                     <TextBox   Style="{StaticResource TextboxWithWhiteBackground}"/>
                 </StackPanel>
                 <Border BorderBrush="White" BorderThickness="1" Grid.Row="1" Margin="10,-10,10,10" Width="600" HorizontalAlignment="Left">
                     <StackPanel Grid.Row="1" Grid.Column="0" Margin="10" Orientation="Vertical" Width="600">
-                        <Label Content="Machine Log:" HorizontalAlignment="Left" Style="{StaticResource HeaderLabelWithWhiteBackground }"/>
+                        <Label Content="{Binding Source={x:Static properties:Strings.DashboardMachineLogLabel}}" HorizontalAlignment="Left" Style="{StaticResource HeaderLabelWithWhiteBackground }"/>
                         <ListBox Style="{StaticResource ListboxWithWhiteBackground}" HorizontalAlignment="Left" Margin="5"/>
                     </StackPanel>
                 </Border>
                 <Border BorderBrush="White" BorderThickness="1" Grid.Row="2" Margin="10" Width="600" HorizontalAlignment="Left">
                     <StackPanel Grid.Row="2" Grid.Column="0" Margin="0,0,0,0" Orientation="Vertical">
-                        <Label Content="Count:" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
+                        <Label Content="{Binding Source={x:Static properties:Strings.DashboardMachineLogCountLabel}}" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
@@ -126,15 +51,15 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Content="Total Count:" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <Label Content="{Binding Source={x:Static properties:Strings.DashboardTotalCountLabel}}" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
                             <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource TextboxWithWhiteBackground}"/>
-                            <Label Content="Tossing:" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <Label Content="{Binding Source={x:Static properties:Strings.DashboardTossingLabel}}" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
                             <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextboxWithWhiteBackground}"/>
-                            <Label Content="Ok Count:" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <Label Content="{Binding Source={x:Static properties:Strings.DashboardOKCount}}" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelWithWhiteBackground}"/>
                             <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextboxWithWhiteBackground}"/>
-                            <Label Content="Cycle Time:" Grid.Row="0" Grid.Column="2" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <Label Content="{Binding Source={x:Static properties:Strings.DashboardCycleTimeLabel}}" Grid.Row="0" Grid.Column="2" Style="{StaticResource LabelWithWhiteBackground}"/>
                             <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource TextboxWithWhiteBackground}"/>
-                            <Label Content="Lead Time" Grid.Row="1" Grid.Column="2" Style="{StaticResource LabelWithWhiteBackground}"/>
+                            <Label Content="{Binding Source={x:Static properties:Strings.DashboardLeadTime}}" Grid.Row="1" Grid.Column="2" Style="{StaticResource LabelWithWhiteBackground}"/>
                             <TextBox Grid.Row="1" Grid.Column="5" Style="{StaticResource TextboxWithWhiteBackground}"/>
 
                         </Grid>
@@ -143,7 +68,7 @@
                 <Border BorderBrush="White" BorderThickness="1" Grid.Row="3" Margin="10" Width="600" HorizontalAlignment="Left">
 
                     <StackPanel Grid.Row="1" Grid.Column="0" Margin="10" Orientation="Vertical">
-                        <Label Content="Logs:" HorizontalAlignment="Left" Margin="5" Foreground="Black" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
+                        <Label Content="{Binding Source={x:Static properties:Strings.DashboardLogLabel}}" HorizontalAlignment="Left" Margin="5" Foreground="Black" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
                         <ListBox Style="{StaticResource ListboxWithWhiteBackground}" Height="200" HorizontalAlignment="Left" Margin="5"/>
                     </StackPanel>
                 </Border>
@@ -168,14 +93,14 @@
                      
 
                         <StackPanel Grid.Row="0" Grid.Column="0"  Orientation="Vertical">
-                            <Label Content="Static Indicators" Style="{ StaticResource HeaderLabelWithWhiteBackground}"/>
+                        <Label Content="{Binding Source={x:Static properties:Strings.DashboardStaticIndicatorsLabel}}" Style="{ StaticResource HeaderLabelWithWhiteBackground}"/>
                             <ListBox Style="{StaticResource ListboxWithWhiteBackground}" HorizontalAlignment="Left" Margin="5"/>
                         </StackPanel>
                         <StackPanel  Grid.Row="0" Grid.Column="1" Orientation="Vertical" >
-                            <Label Content="HIVE" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
+                        <Label Content="{Binding Source={x:Static properties:Strings.DashboardHive}}" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,50,0,0">
-                                <Button Content="Comm Error" Style="{StaticResource ButtonboxWithWhiteBackground}" Background="Green" Height="40"/>
-                                <Button Content="Repair" Style="{StaticResource ButtonboxWithWhiteBackground}" Background="Orange" Height="40"/>
+                            <Button Content="{Binding Source={x:Static properties:Strings.DashboardCommErrorButton}}" Style="{StaticResource ButtonboxWithWhiteBackground}" Background="Green" Height="40"/>
+                            <Button Content="{Binding Source={x:Static properties:Strings.DashboardRepairButtonLabel}}" Style="{StaticResource ButtonboxWithWhiteBackground}" Background="Orange" Height="40"/>
                             </StackPanel>
                         </StackPanel>
                 </Grid>
@@ -184,7 +109,7 @@
                     <Border BorderBrush="White" BorderThickness="1" Margin="5">
 
                         <StackPanel Grid.Row="0" Grid.Column="0"  Orientation="Vertical">
-                            <Label Content="Working Animations" Style="{ StaticResource HeaderLabelWithWhiteBackground}" Height="30"/>
+                            <Label Content="{Binding Source={x:Static properties:Strings.DashboardWorkingAnimationLabel}}" Style="{ StaticResource HeaderLabelWithWhiteBackground}" Height="30"/>
                             <ListBox Style="{StaticResource ListboxWithWhiteBackground}" HorizontalAlignment="Left" Margin="5"/>
                         </StackPanel>
                     </Border>
@@ -192,12 +117,12 @@
                 <Grid Grid.Row="2">
                     <Border BorderBrush="White" BorderThickness="1" Margin="5">
                     <StackPanel Orientation="Vertical">
-                    <Label Content="Controls:" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
+                            <Label Content="{Binding Source={x:Static properties:Strings.DashboardControlsLabel}}" Style="{StaticResource HeaderLabelWithWhiteBackground}"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button Content="▶ Start" Command="{Binding StartCommand}" Margin="5" Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="Green"/>
-                                <Button Content="⏸ Pause" Command="{Binding PauseCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="#79C2D0"/>
-                            <Button Content="⏹ Stop" Command="{Binding StopCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="Red"/>
-                                <Button Content="🔁 Reset" Command="{Binding ResetCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="#A0C8D0"/>
+                                <Button Content="{Binding Source={x:Static properties:Strings.DashboardStartButton}}" Command="{Binding StartCommand}" Margin="5" Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="Green"/>
+                                <Button Content="{Binding Source={x:Static properties:Strings.DashboardPauseButton}}" Command="{Binding PauseCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="#79C2D0"/>
+                                <Button Content="{Binding Source={x:Static properties:Strings.DashboardStopButton}}" Command="{Binding StopCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="Red"/>
+                                <Button Content="{Binding Source={x:Static properties:Strings.DashboardResetButton}}" Command="{Binding ResetCommand}" Margin="5"  Style="{StaticResource BigButtonboxWithWhiteBackground }" Background="#A0C8D0"/>
                         </StackPanel>
                         <!--<Image Source="/Resources/Images/animation.gif" Height="100" Margin="10"/>-->
                     </StackPanel>

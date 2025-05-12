@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:UI.View"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-        Title="ASM Software" Height="700" Width="1600"
+        xmlns:properties="clr-namespace:UI.Resources"
+        Title="{Binding Source={x:Static properties:Strings.MainViewTitle}}" Height="700" Width="1600"
         WindowStartupLocation="CenterScreen"
         xmlns:vm="clr-namespace:UI.ViewModels"
         WindowStyle="None"
@@ -30,10 +31,10 @@
                 <!-- Content section -->
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-
+            <Expander Header="Configuration" IsExpanded="False" Grid.Column="0" HorizontalAlignment="Stretch"  Background="{StaticResource panelActiveColor}">
             <!-- Navigation Menu -->
             <Border CornerRadius="10,0,0,10"
-                    Grid.Column="0">
+                    >
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
                         <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0"/>
@@ -47,7 +48,7 @@
                                 Height="35"
                                 Margin="15,25,0,40">
                         <Image Source="/Images/ASM_Logo.jpg" Height="30"/>
-                        <TextBlock Text="ASM SOFTWARE"
+                        <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewTitle}}"
                                    Foreground="{StaticResource titleColor2}"
                                    FontSize="20"
                                    FontFamily="Montserrat"
@@ -63,7 +64,7 @@
              Command="{Binding ShowDashboardCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"/>
+                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewDashboard}}" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
@@ -74,7 +75,7 @@
                                  Command="{Binding ShowHomeViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Home" Style="{StaticResource menuButtonText}"/>
+                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewHome}}"  Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
@@ -83,7 +84,7 @@
                                  Command="{Binding ShowSettingViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Gear" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Settings" Style="{StaticResource menuButtonText}"/>
+                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewSettings}}" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
@@ -92,7 +93,7 @@
                                 Command="{Binding ShowMotionViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Maximize" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Motion" Style="{StaticResource menuButtonText}"/>
+                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewMotion}}" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
@@ -101,7 +102,7 @@
                                 Command="{Binding ShowEzdMarkViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="FileExcel" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="EZD Mark" Style="{StaticResource menuButtonText}"/>
+                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewEZDMark}}" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
@@ -110,7 +111,7 @@
                                 Command="{Binding ShowCommunicationViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="NetworkWired" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Communication" Style="{StaticResource menuButtonText}"/>
+                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewCommunication}}" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
@@ -119,12 +120,12 @@
                                 Command="{Binding ShowDataViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="FolderOpen" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Data" Style="{StaticResource menuButtonText}"/>
+                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewData}}" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
                 </StackPanel>
             </Border>
-
+            </Expander>
             <!-- Main Section -->
             <Border CornerRadius="0,10,10,0"
                     Grid.Column="1">

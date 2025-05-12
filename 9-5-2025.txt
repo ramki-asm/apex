@@ -1,0 +1,12 @@
+- No login required- Directtly MainView(default)
+mainview
+1)right/down->login
+2)disable the tab required-login- will be enabled after login
+ working on:
+ 1 dual language
+ 2. Dependency Injection
+ 3. Login concept-as discussed
+ 
+ 
+
+
