@@ -16,6 +16,7 @@ xmlns:view="clr-namespace:UI.View"
                 <ResourceDictionary Source="/Styles/ListBox.xaml"/>
                 <ResourceDictionary Source="/Styles/ComboBox.xaml"/>
                 <ResourceDictionary Source="/Styles/TabControl.xaml"/>
+                <!--<ResourceDictionary Source="/Styles/ExpanderStyle.xaml"/>-->
 
             </ResourceDictionary.MergedDictionaries>
         <DataTemplate DataType="{x:Type vm:HomeViewModel}">

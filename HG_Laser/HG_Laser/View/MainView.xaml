@@ -31,7 +31,7 @@
                 <!-- Content section -->
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <Expander Header="Configuration" IsExpanded="False" Grid.Column="0" HorizontalAlignment="Stretch"  Background="{StaticResource panelActiveColor}">
+            <Expander   Header="Configuration" IsExpanded="False" Grid.Column="0" HorizontalAlignment="Left"  Background="{StaticResource panelActiveColor}">
             <!-- Navigation Menu -->
             <Border CornerRadius="10,0,0,10"
                     >

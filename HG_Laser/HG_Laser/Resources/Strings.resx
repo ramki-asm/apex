@@ -148,7 +148,7 @@
     <value>⏸ Pause</value>
   </data>
   <data name="DashBoardProductLabel" xml:space="preserve">
-    <value>Product</value>
+    <value> Product Master</value>
   </data>
   <data name="DashboardRepairButtonLabel" xml:space="preserve">
     <value>Repair</value>

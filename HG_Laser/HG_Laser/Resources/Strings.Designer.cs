@@ -151,7 +151,7 @@ namespace UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Product.
+        ///   Looks up a localized string similar to  Product Master.
         /// </summary>
         public static string DashBoardProductLabel {
             get {

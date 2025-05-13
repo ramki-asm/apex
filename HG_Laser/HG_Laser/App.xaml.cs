@@ -27,11 +27,13 @@ namespace UI
             services.AddSingleton<MainViewModel>();
             services.AddTransient<SettingsViewModel>();
            
+
             // Services
             services.AddSingleton<ISerialPortService,SerialPortService>(); 
             services.AddSingleton<ITcpIpService, TcpIpService>();
             //services.AddSingleton<IUsbService, UsbService>();
             services.AddSingleton<ILocalizationService, LocalizationService>();
+
 
             // Views
             services.AddTransient<LoginView>(provider => new LoginView

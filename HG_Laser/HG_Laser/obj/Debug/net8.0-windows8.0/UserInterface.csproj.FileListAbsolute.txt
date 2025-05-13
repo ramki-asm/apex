@@ -133,3 +133,4 @@ C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows8.0\Styles\TabControl
 C:\Projects\APEX\HG_Laser\HG_Laser\bin\Debug\net8.0-windows8.0\zh-CN\UserInterface.resources.dll
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows8.0\UserInterface.Resources.Strings.zh-CN.resources
 C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows8.0\zh-CN\UserInterface.resources.dll
+C:\Projects\APEX\HG_Laser\HG_Laser\obj\Debug\net8.0-windows8.0\Styles\ExpanderStyle.baml
