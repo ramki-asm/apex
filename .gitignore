@@ -1,1 +1,202 @@
+# -------------------
+# IDEs and Editors
+# -------------------
+# Visual Studio (already in your .gitignore)
 .vs/
+.vscode/                    # Visual Studio Code settings and extensions
+*.code-workspace           # VS Code workspace files
+*.suo                      # Visual Studio solution user options
+*.user                     # Visual Studio user-specific files
+*.userosscache             # Visual Studio cache
+*.sln.docstates            # Visual Studio solution state
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc.)
+.idea/
+*.iml                      # IntelliJ module files
+*.ipr                      # IntelliJ project files
+*.iws                      # IntelliJ workspace files
+
+# Other IDEs
+*.sublime-project          # Sublime Text project files
+*.sublime-workspace        # Sublime Text workspace files
+.netbeans/                 # NetBeans IDE
+*.project                  # Eclipse project files
+*.classpath                # Eclipse classpath
+*.settings/                # Eclipse settings
+
+# -------------------
+# Operating Systems
+# -------------------
+# Windows
+Thumbs.db                  # Thumbnail cache
+*.DS_Store                 # macOS Finder metadata
+desktop.ini                # Windows folder customization
+*.lnk                      # Windows shortcuts
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*                        # macOS metadata files
+
+# Linux
+.*.swp                     # Vim swap files
+.*.swo
+*~                         # Temporary files
+
+# -------------------
+# Build and Dependency Files
+# -------------------
+# General build outputs
+bin/
+obj/
+build/
+dist/
+out/
+target/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json          # Optional: Include if you use Yarn or want to lock dependencies
+yarn.lock                  # Optional: Include if you use npm
+
+# Python
+__pycache__/
+*.py[cod]                  # Compiled Python files
+*.pyc
+*.pyo
+.pytest_cache/
+.env                       # Environment variable files
+venv/
+env/
+*.egg-info/
+pip-log.txt
+Pipfile.lock               # Optional: Include if you use pipenv
+
+# Java
+*.class                    # Compiled Java class files
+*.jar                      # Java archive files (if built locally)
+*.war                      # Web application archive
+*.ear                      # Enterprise application archive
+.mvn/                      # Maven wrapper
+mvnw
+mvnw.cmd
+target/                    # Maven/Gradle build directory
+
+# .NET
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+packages/
+*.nupkg                   # NuGet packages
+
+# Ruby
+.bundle/
+vendor/bundle/
+Gemfile.lock              # Optional: Include if you want to lock dependencies
+
+# Go
+vendor/                   # Go vendor directory (if not using modules)
+*.exe                     # Compiled Go binaries
+*.exe~
+
+# -------------------
+# Dependency Managers
+# -------------------
+# Composer (PHP)
+vendor/
+composer.lock             # Optional: Include if you want to lock dependencies
+
+# Gradle
+.gradle/
+build.gradle              # Optional: Include if you want to ignore Gradle config
+
+# -------------------
+# Testing and Coverage
+# -------------------
+coverage/
+*.lcov
+*.cov
+*.cover
+*.coverage
+test-results/
+junit.xml
+
+# -------------------
+# Logs and Temporary Files
+# -------------------
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*.swo
+temp/
+tmp/
+
+# -------------------
+# Environment and Secrets
+# -------------------
+.env.local
+.env.*.local
+*.env                     # Environment variable files
+*.pem                     # Private keys
+*.key
+*.crt                     # Certificates
+secrets/
+credentials.json
+
+# -------------------
+# Package Managers
+# -------------------
+# Yarn
+.yarn/
+.yarnrc
+yarn-error.log
+
+# pnpm
+pnpm-lock.yaml            # Optional: Include if you use npm or Yarn
+
+# -------------------
+# Common Frameworks
+# -------------------
+# React
+/build                    # React build output
+/coverage                 # Test coverage reports
+
+# Angular
+/dist                     # Angular build output
+/e2e/                     # End-to-end test files
+
+# Vue.js
+/dist                     # Vue build output
+
+# Django
+*.sqlite3                 # Default SQLite database
+media/                    # User-uploaded files (if not versioned)
+static/                   # Collected static files (if not versioned)
+
+# Flask
+instance/                 # Flask instance folder
+
+# -------------------
+# Documentation
+# -------------------
+docs/_build/              # Sphinx documentation build
+_site/                    # Jekyll site output
+
+# -------------------
+# Miscellaneous
+# -------------------
+*.bak
+*.gho                     # Ghost image files
+*.orig
+*.rej
+*.swp
+*.swo
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
