@@ -1,202 +1,93 @@
-# -------------------
-# IDEs and Editors
-# -------------------
-# Visual Studio (already in your .gitignore)
-.vs/
-.vscode/                    # Visual Studio Code settings and extensions
-*.code-workspace           # VS Code workspace files
-*.suo                      # Visual Studio solution user options
-*.user                     # Visual Studio user-specific files
-*.userosscache             # Visual Studio cache
-*.sln.docstates            # Visual Studio solution state
-
-# JetBrains IDEs (IntelliJ, PyCharm, etc.)
-.idea/
-*.iml                      # IntelliJ module files
-*.ipr                      # IntelliJ project files
-*.iws                      # IntelliJ workspace files
-
-# Other IDEs
-*.sublime-project          # Sublime Text project files
-*.sublime-workspace        # Sublime Text workspace files
-.netbeans/                 # NetBeans IDE
-*.project                  # Eclipse project files
-*.classpath                # Eclipse classpath
-*.settings/                # Eclipse settings
-
-# -------------------
-# Operating Systems
-# -------------------
-# Windows
-Thumbs.db                  # Thumbnail cache
-*.DS_Store                 # macOS Finder metadata
-desktop.ini                # Windows folder customization
-*.lnk                      # Windows shortcuts
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*                        # macOS metadata files
-
-# Linux
-.*.swp                     # Vim swap files
-.*.swo
-*~                         # Temporary files
-
-# -------------------
-# Build and Dependency Files
-# -------------------
-# General build outputs
+# Visual Studio / .NET / WPF
+## Build outputs
 bin/
 obj/
-build/
-dist/
-out/
-target/
 
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-package-lock.json          # Optional: Include if you use Yarn or want to lock dependencies
-yarn.lock                  # Optional: Include if you use npm
+## Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Python
-__pycache__/
-*.py[cod]                  # Compiled Python files
-*.pyc
-*.pyo
-.pytest_cache/
-.env                       # Environment variable files
-venv/
-env/
-*.egg-info/
-pip-log.txt
-Pipfile.lock               # Optional: Include if you use pipenv
+## Visual Studio Code
+.vscode/
 
-# Java
-*.class                    # Compiled Java class files
-*.jar                      # Java archive files (if built locally)
-*.war                      # Web application archive
-*.ear                      # Enterprise application archive
-.mvn/                      # Maven wrapper
-mvnw
-mvnw.cmd
-target/                    # Maven/Gradle build directory
-
-# .NET
-*.csproj.nuget.g.props
-*.csproj.nuget.g.targets
+## NuGet Packages
 packages/
-*.nupkg                   # NuGet packages
+*.nupkg
+# Exclude NuGet package cache
+.nuget/
+**/packages.lock.json
 
-# Ruby
-.bundle/
-vendor/bundle/
-Gemfile.lock              # Optional: Include if you want to lock dependencies
+## Roslyn cache (used by Visual Studio)
+*.ide/
+*.ide-shm
+*.ide-wal
 
-# Go
-vendor/                   # Go vendor directory (if not using modules)
-*.exe                     # Compiled Go binaries
-*.exe~
+## Test results
+TestResults/
+*.trx
+*.xml
 
-# -------------------
-# Dependency Managers
-# -------------------
-# Composer (PHP)
-vendor/
-composer.lock             # Optional: Include if you want to lock dependencies
-
-# Gradle
-.gradle/
-build.gradle              # Optional: Include if you want to ignore Gradle config
-
-# -------------------
-# Testing and Coverage
-# -------------------
-coverage/
-*.lcov
-*.cov
-*.cover
-*.coverage
-test-results/
-junit.xml
-
-# -------------------
-# Logs and Temporary Files
-# -------------------
+## Temporary files
+*.cache
 *.log
-logs/
 *.tmp
 *.bak
 *.swp
-*.swo
-temp/
-tmp/
+*~
 
-# -------------------
-# Environment and Secrets
-# -------------------
-.env.local
-.env.*.local
-*.env                     # Environment variable files
-*.pem                     # Private keys
-*.key
-*.crt                     # Certificates
-secrets/
-credentials.json
+## Dependency directories
+node_modules/  # In case you use JavaScript/TypeScript in the project
 
-# -------------------
-# Package Managers
-# -------------------
-# Yarn
-.yarn/
-.yarnrc
-yarn-error.log
+## Miscellaneous
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rchive/
+*.pdb
+*.ipch
+*.sdf
+*.aps
+*.ilk
+*.idb
+*.tlog
+*.exp
+*.lib
+*.manifest
+*.res
+*.lastbuildstate
+*.tlog/
+*.VC.db
+*.VC.VC.opendb
 
-# pnpm
-pnpm-lock.yaml            # Optional: Include if you use npm or Yarn
+## Project-specific exclusions (optional, customize as needed)
+# Ignore sensitive configuration files (e.g., API keys)
+appsettings.local.json
+secrets.json
 
-# -------------------
-# Common Frameworks
-# -------------------
-# React
-/build                    # React build output
-/coverage                 # Test coverage reports
+# Ignore local database files (if using local DB like SQLite)
+*.db
+*.sqlite
+*.mdf
+*.ldf
 
-# Angular
-/dist                     # Angular build output
-/e2e/                     # End-to-end test files
+## Allow essential files
+!.gitignore
+!*.csproj
+!*.sln
+!*.xaml
+!*.cs
+!*.resx
+!*.config
+!*.json  # Include JSON unless explicitly ignored (e.g., appsettings.json)
+!*.md
 
-# Vue.js
-/dist                     # Vue build output
+## macOS-specific
+.DS_Store
 
-# Django
-*.sqlite3                 # Default SQLite database
-media/                    # User-uploaded files (if not versioned)
-static/                   # Collected static files (if not versioned)
-
-# Flask
-instance/                 # Flask instance folder
-
-# -------------------
-# Documentation
-# -------------------
-docs/_build/              # Sphinx documentation build
-_site/                    # Jekyll site output
-
-# -------------------
-# Miscellaneous
-# -------------------
-*.bak
-*.gho                     # Ghost image files
-*.orig
-*.rej
-*.swp
-*.swo
-*.zip
-*.tar.gz
-*.tgz
-*.rar
-*.7z
+## Windows-specific
+Thumbs.db
+Desktop.ini
