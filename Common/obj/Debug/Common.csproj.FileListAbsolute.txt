@@ -44,3 +44,6 @@ C:\Projects\APEX\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Projects\APEX\Common\obj\Debug\Common.csproj.Up2Date
 C:\Projects\APEX\Common\obj\Debug\Common.dll
 C:\Projects\APEX\Common\obj\Debug\Common.pdb
+C:\Projects\APEX\Common\bin\Debug\log4net.dll
+C:\Projects\APEX\Common\bin\Debug\log4net.pdb
+C:\Projects\APEX\Common\bin\Debug\log4net.xml

@@ -173,3 +173,6 @@ C:\Projects\APEX\Services\obj\Debug\Services.dll
 C:\Projects\APEX\Services\obj\Debug\Services.pdb
 C:\Projects\APEX\Services\bin\Debug\System.IO.Ports.dll
 C:\Projects\APEX\Services\bin\Debug\System.IO.Ports.xml
+C:\Projects\APEX\Services\bin\Debug\log4net.dll
+C:\Projects\APEX\Services\bin\Debug\log4net.pdb
+C:\Projects\APEX\Services\bin\Debug\log4net.xml
