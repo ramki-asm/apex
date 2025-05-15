@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace APEX.Configuration.Configurations
+namespace APEX.Configuration
 {
     public class DatabaseConfig
     {

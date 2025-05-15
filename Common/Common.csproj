@@ -77,16 +77,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converters\BooleanToIconConverter.cs" />
-    <Compile Include="Enums\ApplicationTheme.cs" />
     <Compile Include="Enums\ConnectionStatus.cs" />
     <Compile Include="Enums\ControlState.cs" />
     <Compile Include="Enums\NotificationType.cs" />
     <Compile Include="Enums\UserRole.cs" />
-    <Compile Include="Extemsion\EnumExtensions.cs" />
-    <Compile Include="Extemsion\StringExtensions.cs" />
-    <Compile Include="Helpers\PasswordBoxHelper.cs" />
-    <Compile Include="Helpers\PasswordHelper.cs" />
+    <Compile Include="Extension\EnumExtensions.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Helpers\ViewModelBase.cs" />
     <Compile Include="Interfaces\IAuditable.cs" />
@@ -117,21 +113,6 @@
     <Compile Include="Models\Validations\ValidationError.cs" />
     <Compile Include="Models\Validations\ValidationResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\10User.png" />
-    <Content Include="Images\1Main.png" />
-    <Content Include="Images\2Settings.png" />
-    <Content Include="Images\3Vision.png" />
-    <Content Include="Images\4Motion.png" />
-    <Content Include="Images\5Ezd.png" />
-    <Content Include="Images\6Power.png" />
-    <Content Include="Images\7WebTest.png" />
-    <Content Include="Images\8Calib.png" />
-    <Content Include="Images\9Data.png" />
-    <Content Include="Images\ASM_Logo.jpg" />
-    <Content Include="Images\key-icon.png" />
-    <Content Include="Images\user-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

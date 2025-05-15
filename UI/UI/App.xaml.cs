@@ -35,6 +35,8 @@ namespace UI
             services.AddSingleton<MainViewModel>();
             services.AddTransient<SettingsViewModel>();
             services.AddTransient<AlarmViewModel>();
+
+
             // Services
             services.AddSingleton<ISerialPortService,SerialPortService>(); 
             services.AddSingleton<ITcpIpService, TcpIpService>();

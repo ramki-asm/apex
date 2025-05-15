@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using APEX.Common.Models;
 
-namespace APEX.Services.Data
+namespace APEX.Services.DBContext
 {
     public class ApplicationDbContext : DbContext
     {
