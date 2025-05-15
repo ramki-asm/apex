@@ -1,0 +1,131 @@
+﻿<Window x:Class="UI.View.SettingsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UI.View"
+ xmlns:properties="clr-namespace:UI.Resources"
+        mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="{StaticResource panelActiveColor}">
+        <TabControl Background="Transparent" BorderThickness="0">
+            <!-- Serial Communication Tab -->
+            <TabItem Header="{Binding Source={x:Static properties:Strings.SettingsControlsSerialCommunication}}">
+                <ScrollViewer>
+                    <StackPanel Margin="10">
+                        <GroupBox Header="{Binding Source={x:Static properties:Strings.SettingsControlsSerialPortCommunication}}" Margin="0 0 0 10">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="39.791"/>
+                                    <ColumnDefinition Width="18.966"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{Binding Source={x:Static properties:Strings.SettingsControlsSerialPortNumber}}" Grid.Row="0" Grid.Column="0" Margin="0 0 5 5" Grid.ColumnSpan="2"/>
+                                <ComboBox Grid.Row="0" Grid.Column="2" Margin="0,0,0,5" 
+                                      ItemsSource="{Binding AvailablePorts}"
+                                      SelectedItem="{Binding SelectedPort}"/>
+
+                                <TextBlock Text="{Binding Source={x:Static properties:Strings.SettingsControlsSerialCommunicationBaudRate}}" Grid.Row="1" Grid.Column="0" Margin="0 0 5 5" Grid.ColumnSpan="2"/>
+                                <ComboBox Grid.Row="1" Grid.Column="2" Margin="0,0,0,5"
+                                      ItemsSource="{Binding BaudRates}"
+                                      SelectedItem="{Binding SelectedBaudRate}"/>
+
+                                <TextBlock Text="{Binding Source={x:Static properties:Strings.SettingsControlsSerialportParity}}" Grid.Row="2" Grid.Column="0" Margin="0 0 5 5" Grid.ColumnSpan="2"/>
+                                <ComboBox Grid.Row="2" Grid.Column="2" Margin="0,0,0,5"
+                                      ItemsSource="{Binding ParityOptions}"
+                                      SelectedItem="{Binding SelectedParity}"/>
+
+                                <Button Grid.Row="3" Grid.ColumnSpan="3" Content="{Binding Source={x:Static properties:Strings.SettingsControlsSerialCommunicationConnect}}" 
+                                    Command="{Binding ConnectSerialCommand}"
+                                    Margin="0 10 0 0" Height="25"/>
+                            </Grid>
+                        </GroupBox>
+
+                        <GroupBox Header="{Binding Source={x:Static properties:Strings.SettingsControlsSerialCommunicationConnectionStatus}}">
+                            <StackPanel>
+                                <TextBlock Text="{Binding ConnectionStatus}" Margin="5"/>
+                                <ProgressBar IsIndeterminate="{Binding IsConnecting}" 
+                                         Height="5" Margin="5 0"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- TCP/IP Communication Tab -->
+            <TabItem Header="{Binding Source={x:Static properties:Strings.SettingsControlsTCPIPCommunication}}">
+                <ScrollViewer>
+                    <StackPanel Margin="10">
+                        <GroupBox Header="{Binding Source={x:Static properties:Strings.SettingsControlsTCPIPCommunicationConfiguration}}">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{Binding Source={x:Static properties:Strings.SettingsControlsTCPIPCommunicationIPAddress}}" Grid.Row="0" Grid.Column="0" Margin="0 0 5 5"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" Margin="0 0 0 5"
+                                     Text="{Binding IpAddress}"/>
+
+                                <TextBlock Text="{Binding Source={x:Static properties:Strings.SettingsControlsTCPIPCommunicationPortNo}}" Grid.Row="1" Grid.Column="0" Margin="0 0 5 5"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" Margin="0 0 0 5"
+                                     Text="{Binding Port}"/>
+
+                                <Button Grid.Row="2" Grid.ColumnSpan="2" Content="{Binding Source={x:Static properties:Strings.SettingsControlsTCPIPCommunicationConnect}}"
+                                    Command="{Binding ConnectTcpCommand}"
+                                    Margin="0 10 0 0" Height="25"/>
+                            </Grid>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- Ethernet Communication Tab -->
+            <TabItem Header="{Binding Source={x:Static properties:Strings.SettingsControlsEthernetCommunication}}">
+                <ScrollViewer>
+                    <StackPanel Margin="10">
+                        <GroupBox Header="Ethernet Settings">
+                            <Grid Margin="5">
+                                <!-- Add MAC address, IP config fields -->
+                            </Grid>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- USB Connection Tab -->
+            <TabItem Header="USB Connection">
+                <ScrollViewer>
+                    <StackPanel Margin="10">
+                        <GroupBox Header="{Binding Source={x:Static properties:Strings.SettingsControlsUSBCommunication}}">
+                            <ListBox ItemsSource="{Binding UsbDevices}"
+                                 SelectedItem="{Binding SelectedUsbDevice}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding DeviceName}" FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding DeviceId}" FontSize="10"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </GroupBox>
+                        <Button Content="Refresh Devices" Command="{Binding RefreshUsbCommand}"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
