@@ -61,7 +61,7 @@
                     </StackPanel>
 
                     <!-- Menu Buttons -->
-                    <RadioButton Style="{StaticResource menuButton}"
+                    <RadioButton Style="{StaticResource menuButton}" IsEnabled="False"
              Tag="{StaticResource color1}"
              IsChecked="True"
              Command="{Binding ShowDashboardCommand}">

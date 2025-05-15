@@ -8,9 +8,9 @@
         >
     <Grid>
 
-        <DataGrid AutoGenerateColumns="False"  Background="{StaticResource panelActiveColor}"
+        <DataGrid AutoGenerateColumns="True"  Background="{StaticResource panelActiveColor}"
                   ItemsSource="{Binding Alarm}" 
-                  CanUserAddRows="False" 
+                  CanUserAddRows="True" 
                   IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Serial" 

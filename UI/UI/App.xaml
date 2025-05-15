@@ -29,7 +29,7 @@
                 <controls:HomeView/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type vm:AlarmViewModel}">
-                <controls:Alarms/>
+                <controls:AlarmControl/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
