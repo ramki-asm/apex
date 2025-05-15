@@ -210,14 +210,14 @@ namespace UI.ViewModels
                         button.Icon = iconChar.ToString(); // Ensure consistency
                     }
 
-                    // Map the command name to the actual ICommand
+                     
                     if (commandMap.TryGetValue(button.CommandName, out var command))
                     {
                         button.Command = command;
                     }
                     else
                     {
-                        // Optional: Log a warning if the command is not found
+                        
                         Console.WriteLine($"Command '{button.CommandName}' not found for button '{button.Text}'.");
                     }
                 }
@@ -236,17 +236,9 @@ namespace UI.ViewModels
 
         private bool ShouldShowButton(MenuButtonConfig button)
         {
-            // Example configuration logic
-            // Replace with your actual logic, e.g., user roles, feature flags, etc.
-            // For this example, we'll show all non-default buttons
-            return true;
 
-            // Example: Show "Settings" only for admin users
-            // bool isAdmin = CheckIfUserIsAdmin(); // Implement this method
-            // if (button.Text == "Settings" && !isAdmin)
-            //     return false;
-            //
-            // return true;
+            return (button.IsChecked && button.IsDefault);
+ 
         }
 
         private void ExecuteShowAlarmViewCommand(object obj)

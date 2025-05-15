@@ -5,8 +5,7 @@
         "CommandName": "ShowDashboardCommand",
         "TagColor": "color1",
         "IsDefault": true,
-        "IsChecked": true,
-        "IsEnabled": true
+        "IsChecked": true
     },
     {
         "Text": "Home",
@@ -14,26 +13,15 @@
         "CommandName": "ShowHomeViewCommand",
         "TagColor": "color1",
         "IsDefault": true,
-        "IsChecked": true,
-        "IsEnabled": true
+        "IsChecked": true 
     },
-        //{
-        //    "Text": "Customers",
-        //    "Icon": "UserGroup",
-        //    "CommandName": "ShowCustomerViewCommand",
-        //    "TagColor": "color2",
-        //    "IsDefault": false,
-        //    "IsChecked": true,
-        //    "IsEnabled": true
-        //},
     {
         "Text": "Settings",
         "Icon": "Gear",
         "CommandName": "ShowSettingViewCommand",
         "TagColor": "color2",
-        "IsDefault": true,
-        "IsChecked": true,
-        "IsEnabled": true
+        "IsDefault": false,
+        "IsChecked": false 
     },
     {
         "Text": "Alarms",
@@ -41,7 +29,6 @@
         "CommandName": "ShowAlarmViewCommand",
         "TagColor": "color1",
         "IsDefault": true,
-        "IsChecked": true,
-        "IsEnabled": true
+        "IsChecked": true 
     }
 ]
