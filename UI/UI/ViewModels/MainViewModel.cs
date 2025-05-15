@@ -169,10 +169,8 @@ namespace UI.ViewModels
             ShowAlarmViewCommand = new ViewModelCommand(ExecuteShowAlarmViewCommand);
             ShowDashboardCommand = new ViewModelCommand(ExecuteShowDashboardCommand);
 
-            // Load menu buttons from JSON
             LoadMenuButtons();
 
-            // Initialize the default view
             ExecuteShowHomeViewCommand(null);
         }
 

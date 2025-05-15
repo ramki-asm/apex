@@ -1,7 +1,6 @@
 ﻿// ViewModels/CustomerViewModel.cs
 using APEX.Common.Helpers;
 using Common.Models;
-using Common.Models;
 using System.Collections.ObjectModel;
 using System.Linq;
 
