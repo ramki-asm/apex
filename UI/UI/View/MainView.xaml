@@ -10,10 +10,30 @@
         Title="{Binding Source={x:Static properties:Strings.MainViewTitle}}" Height="900" Width="1600"
         WindowStartupLocation="CenterScreen"
         xmlns:vm="clr-namespace:UI.ViewModels"
+        xmlns:converters="clr-namespace:UI.Converters"
         WindowStyle="None"
         Background="#D6F0F7"
         AllowsTransparency="True">
-     
+
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+            <local:DashboardView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SettingViewModel}">
+            <local:SettingView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:DashboardViewModel}">
+            <local:HomeView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AlarmViewModel}">
+            <local:AlarmControl/>
+        </DataTemplate>
+    </Window.Resources>
+
     <Border CornerRadius="10"                    
             BorderThickness="1">
         <Border.BorderBrush>
@@ -24,130 +44,60 @@
             </LinearGradientBrush>
         </Border.BorderBrush>
 
-        <Grid >
+        <Grid>
             <Grid.ColumnDefinitions>
                 <!-- Navigation Menu -->
                 <ColumnDefinition Width="*"/>
                 <!-- Content section -->
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <Expander   Header="Configuration" IsExpanded="True" 
-                        Grid.Column="0" HorizontalAlignment="Stretch" 
-                        ExpandDirection="Up" VerticalAlignment="Stretch"
-          Background="{StaticResource panelActiveColor}" Style="{StaticResource RightToLeftExpanderStyle}" >
-            <!-- Navigation Menu -->
-            <Border CornerRadius="10,0,0,10"
-                    >
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
-                        <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0"/>
-                        <GradientStop Color="{StaticResource secondaryBackColor2}" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-                <StackPanel>
+            <Expander Header="Configuration" IsExpanded="True" 
+                      Grid.Column="0" HorizontalAlignment="Stretch" 
+                      ExpandDirection="Up" VerticalAlignment="Stretch"
+                      Background="{StaticResource panelActiveColor}" 
+                      Style="{StaticResource RightToLeftExpanderStyle}">
+                <!-- Navigation Menu -->
+                <Border CornerRadius="10,0,0,10">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                            <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0"/>
+                            <GradientStop Color="{StaticResource secondaryBackColor2}" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <StackPanel>
+                        <!-- Logo -->
+                        <StackPanel Orientation="Horizontal"
+                                    Height="35"
+                                    Margin="15,25,0,40">
+                            <Image Source="/Images/ASM_Logo.jpg" Height="30"/>
+                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewTitle}}"
+                                       Foreground="{StaticResource titleColor2}"
+                                       FontSize="20"
+                                       FontFamily="Montserrat"
+                                       FontWeight="Medium"
+                                       VerticalAlignment="Center"
+                                       Margin="10,0,0,0"/>
+                        </StackPanel>
 
-                    <!-- Logo -->
-                    <StackPanel Orientation="Horizontal"
-                                Height="35"
-                                Margin="15,25,0,40">
-                        <Image Source="/Images/ASM_Logo.jpg" Height="30"/>
-                        <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewTitle}}"
-                                   Foreground="{StaticResource titleColor2}"
-                                   FontSize="20"
-                                   FontFamily="Montserrat"
-                                   FontWeight="Medium"
-                                   VerticalAlignment="Center"
-                                   Margin="10,0,0,0"/>
+                        <!-- Dynamic Menu Buttons -->
+                        <ItemsControl ItemsSource="{Binding MenuButtons}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton Style="{StaticResource menuButton}"
+                                                 Tag="{Binding TagColor, Converter={StaticResource ResourceKeyToResourceConverter}}"
+                                                 IsChecked="{Binding IsChecked}"
+                                                 IsEnabled="{Binding IsEnabled}"
+                                                 Command="{Binding Command}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <fa:IconImage Icon="{Binding Icon}" Style="{StaticResource menuButtonIcon}"/>
+                                            <TextBlock Text="{Binding Text}" Style="{StaticResource menuButtonText}"/>
+                                        </StackPanel>
+                                    </RadioButton>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
                     </StackPanel>
-
-                    <!-- Menu Buttons -->
-                    <RadioButton Style="{StaticResource menuButton}" IsEnabled="False"
-             Tag="{StaticResource color1}"
-             IsChecked="True"
-             Command="{Binding ShowDashboardCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewDashboard}}" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                    
-                    <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color1}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewHome}}"  Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                    <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color2}"
-                                 Command="{Binding ShowSettingViewCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="Gear" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewSettings}}" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                        <RadioButton Style="{StaticResource menuButton}"
-Tag="{StaticResource color1}"
-IsChecked="True"
-Command="{Binding ShowAlarmViewCommand}">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewAlarm}}" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
-
-
-                        <RadioButton Style="{StaticResource menuButton}"
-                                Tag="{StaticResource color2}"
-                                Command="{Binding ShowMotionViewCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="Maximize" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewMotion}}" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                    <RadioButton Style="{StaticResource menuButton}"
-                                Tag="{StaticResource color2}"
-                                Command="{Binding ShowEzdMarkViewCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="FileExcel" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewEZDMark}}" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                    <RadioButton Style="{StaticResource menuButton}"
-                                Tag="{StaticResource color2}"
-                                Command="{Binding ShowCommunicationViewCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="NetworkWired" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewCommunication}}" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                    <RadioButton Style="{StaticResource menuButton}"
-                                Tag="{StaticResource color2}"
-                                Command="{Binding ShowDataViewCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="FolderOpen" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewData}}" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                        <RadioButton Style="{StaticResource menuButton}"
-             Tag="{StaticResource color2}"
-             Command="{Binding ShowDataViewCommand}">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="User" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="{Binding Source={x:Static properties:Strings.MainViewUser}}" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
-                    </StackPanel>
-            </Border>
+                </Border>
             </Expander>
             <!-- Main Section -->
             <Border CornerRadius="0,10,10,0"

@@ -1,0 +1,47 @@
+[
+    {
+        "Text": "Dashboard",
+        "Icon": "Home",
+        "CommandName": "ShowDashboardCommand",
+        "TagColor": "color1",
+        "IsDefault": true,
+        "IsChecked": true,
+        "IsEnabled": true
+    },
+    {
+        "Text": "Home",
+        "Icon": "Home",
+        "CommandName": "ShowHomeViewCommand",
+        "TagColor": "color1",
+        "IsDefault": true,
+        "IsChecked": true,
+        "IsEnabled": true
+    },
+        //{
+        //    "Text": "Customers",
+        //    "Icon": "UserGroup",
+        //    "CommandName": "ShowCustomerViewCommand",
+        //    "TagColor": "color2",
+        //    "IsDefault": false,
+        //    "IsChecked": true,
+        //    "IsEnabled": true
+        //},
+    {
+        "Text": "Settings",
+        "Icon": "Gear",
+        "CommandName": "ShowSettingViewCommand",
+        "TagColor": "color2",
+        "IsDefault": true,
+        "IsChecked": true,
+        "IsEnabled": true
+    },
+    {
+        "Text": "Alarms",
+        "Icon": "Home",
+        "CommandName": "ShowAlarmViewCommand",
+        "TagColor": "color1",
+        "IsDefault": true,
+        "IsChecked": true,
+        "IsEnabled": true
+    }
+]

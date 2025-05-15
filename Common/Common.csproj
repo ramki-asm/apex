@@ -102,6 +102,7 @@
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\LocalizedString.cs" />
     <Compile Include="Models\MachineLog.cs" />
+    <Compile Include="Models\MenuButtonConfig.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\Permission.cs" />
