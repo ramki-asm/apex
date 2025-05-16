@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{9857D29C-50A7-43FA-8694-2D1A102AF33E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{EE6914F2-8985-4572-A40A-A8BDDA56D249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{755027D8-86E7-4EFC-80DD-FED129ECD43E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{4DE0D30D-35C9-4BB3-AB93-126C7A7CC606}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9857D29C-50A7-43FA-8694-2D1A102AF33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9857D29C-50A7-43FA-8694-2D1A102AF33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9857D29C-50A7-43FA-8694-2D1A102AF33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9857D29C-50A7-43FA-8694-2D1A102AF33E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE6914F2-8985-4572-A40A-A8BDDA56D249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6914F2-8985-4572-A40A-A8BDDA56D249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6914F2-8985-4572-A40A-A8BDDA56D249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6914F2-8985-4572-A40A-A8BDDA56D249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755027D8-86E7-4EFC-80DD-FED129ECD43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755027D8-86E7-4EFC-80DD-FED129ECD43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755027D8-86E7-4EFC-80DD-FED129ECD43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755027D8-86E7-4EFC-80DD-FED129ECD43E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE0D30D-35C9-4BB3-AB93-126C7A7CC606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE0D30D-35C9-4BB3-AB93-126C7A7CC606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE0D30D-35C9-4BB3-AB93-126C7A7CC606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE0D30D-35C9-4BB3-AB93-126C7A7CC606}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_Rules = {"EnabledRules":["StringFormat","WhiteSpaceLead","WhiteSpaceTail","PunctuationLead","PunctuationTail"]}
+		RESX_ResXSortingComparison = CurrentCultureIgnoreCase
+		RESX_PrefixTranslations = False
+		SolutionGuid = {FF9C806A-2A3A-4ABE-90E1-14F1C1B42B63}
+		RESX_AutoCreateNewLanguageFiles = True
+		RESX_CultureCountyOverrides = 
+		RESX_ConfirmAddLanguageFile = True
+		RESX_EnableXlifSync = False
+		RESX_AutoApplyExistingTranslations = False
+		RESX_TaskErrorCategory = Error
+	EndGlobalSection
+EndGlobal

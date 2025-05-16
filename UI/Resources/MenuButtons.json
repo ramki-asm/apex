@@ -1,0 +1,38 @@
+[
+   
+    {
+        "Text": "Home",
+        "Icon": "Home",
+        "CommandName": "ShowHomeViewCommand",
+        "TagColor": "color1",
+        "IsVisible": true
+    },
+    {
+        "Text": "Settings",
+        "Icon": "Gear",
+        "CommandName": "ShowSettingViewCommand",
+        "TagColor": "color2",
+        "IsVisible": true
+    },
+    {
+        "Text": "Alarms",
+        "Icon": "Bell",
+        "CommandName": "ShowAlarmViewCommand",
+        "TagColor": "color1",
+        "IsVisible": true
+    },
+    {
+        "Text": "User",
+        "Icon": "User",
+        "CommandName": "ShowUserViewCommand",
+        "TagColor": "color2",
+        "IsVisible": true
+    },
+    {
+        "Text": "Data",
+        "Icon": "Data",
+        "CommandName": "ShowUserViewCommand",
+        "TagColor": "color2",
+        "IsVisible": true
+    }
+]

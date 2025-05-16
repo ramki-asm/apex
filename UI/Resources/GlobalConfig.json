@@ -1,0 +1,33 @@
+{
+    "Menu": [
+        {
+            "Text": "Dashboard",
+            "Icon": "/Images/Home.png",
+            "CommandName": "ShowDashboardCommand",
+            "TagColor": "color1",
+            "IsVisible": true
+        },
+        {
+            "Text": "Home",
+            "Icon": "Home",
+            "CommandName": "ShowHomeViewCommand",
+            "TagColor": "color1",
+            "IsVisible": true
+        },
+        {
+            "Text": "Settings",
+            "Icon": "Gear",
+            "CommandName": "ShowSettingViewCommand",
+            "TagColor": "color2",
+            "IsVisible": true
+        },
+        {
+            "Text": "Alarms",
+            "Icon": "Home",
+            "CommandName": "ShowAlarmViewCommand",
+            "TagColor": "color1",
+            "IsVisible": true
+
+        }
+    ]
+}

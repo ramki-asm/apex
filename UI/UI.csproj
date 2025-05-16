@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\ASMLogo.jpg" />
+    <None Remove="Images\ASM_Logo.jpg" />
+    <None Remove="Images\Calib.png" />
+    <None Remove="Images\Data.png" />
+    <None Remove="Images\Ezd.png" />
+    <None Remove="Images\key-icon.png" />
+    <None Remove="Images\KeyIcon.png" />
+    <None Remove="Images\Main.png" />
+    <None Remove="Images\Motion.png" />
+    <None Remove="Images\Power.png" />
+    <None Remove="Images\profile-picture.png" />
+    <None Remove="Images\ProfilePicture.png" />
+    <None Remove="Images\Settings.png" />
+    <None Remove="Images\user-icon.png" />
+    <None Remove="Images\User.png" />
+    <None Remove="Images\UserIcon.png" />
+    <None Remove="Images\Vision.png" />
+    <None Remove="Images\WebTest.png" />
+    <None Remove="Resources\GlobalConfig.json" />
+    <None Remove="Resources\MenuButtons.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\ASMLogo.jpg" />
+    <Resource Include="Images\ASM_Logo.jpg" />
+    <Resource Include="Images\Calib.png" />
+    <Resource Include="Images\Data.png" />
+    <Resource Include="Images\Ezd.png" />
+    <Resource Include="Images\key-icon.png" />
+    <Resource Include="Images\KeyIcon.png" />
+    <Resource Include="Images\Main.png" />
+    <Resource Include="Images\Motion.png" />
+    <Resource Include="Images\Power.png" />
+    <Resource Include="Images\profile-picture.png" />
+    <Resource Include="Images\ProfilePicture.png" />
+    <Resource Include="Images\Settings.png" />
+    <Resource Include="Images\user-icon.png" />
+    <Resource Include="Images\User.png" />
+    <Resource Include="Images\UserIcon.png" />
+    <Resource Include="Images\Vision.png" />
+    <Resource Include="Images\WebTest.png" />
+    <Content Include="Resources\GlobalConfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MenuButtons.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Styles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Prism.Core" Version="9.0.537" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Configuration\Configuration.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Language.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Language.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>UI.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Language_Chinese.zh.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>UI.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,137 @@
+﻿<Window x:Class="UI.Views.MainForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI.Views"
+        mc:Ignorable="d"
+        Title="Customer Management" Height="450" Width="800">
+
+    <Grid Background="{StaticResource panelActiveColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Search and Action Buttons -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="13"
+                     Height="24"
+                     Width="300"
+                     Background="Transparent"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"                                                       
+                     BorderThickness="0,0,0,1"                             
+                     VerticalContentAlignment="Center"
+                     Margin="5,5,0,0"/>
+
+            <Button Grid.Column="1"
+                    Command="{Binding SearchCommand}"
+                    Content="Search"                            
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    BorderThickness="0"
+                    Foreground="White"
+                    VerticalAlignment="Top" 
+                    Margin="0,5,0,0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#773DFF"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Height="30"
+                                            CornerRadius="15"
+                                            Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#836EFB"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Grid.Column="2"
+                    Command="{Binding AddCustomerCommand}"
+                    Content="Add Customer"                            
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    BorderThickness="0"
+                    Foreground="White"
+                    VerticalAlignment="Top" 
+                    Margin="0,5,0,0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#462AD8"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Height="30"
+                                            CornerRadius="15"
+                                            Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#28AEED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+
+        <!-- Customer DataGrid -->
+        <Border Grid.Row="1"
+               
+            CornerRadius="10" 
+                Padding="10">
+            <DataGrid ItemsSource="{Binding Customers}"
+                      SelectedItem="{Binding SelectedCustomer}"
+                      ColumnWidth="*"
+                    Background="{StaticResource panelActiveColor}"
+                      Foreground="Black"
+                      BorderThickness="0"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False">
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="#BCBEE0"/>
+                        <Setter Property="Padding" Value="10,0,0,10"/>
+                        <Setter Property="FontFamily" Value="Montserrat"/>
+                        <Setter Property="FontSize" Value="15"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                    <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                    <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+                    <DataGridTextColumn Header="Number" Binding="{Binding Number}"/>
+                    <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</Window>
