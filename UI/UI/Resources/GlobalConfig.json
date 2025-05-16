@@ -26,7 +26,7 @@
             "Icon": "Home",
             "CommandName": "ShowAlarmViewCommand",
             "TagColor": "color1",
-            "IsVisible": false
+            "IsVisible": true
 
         }
     ]

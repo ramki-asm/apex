@@ -8,8 +8,8 @@ namespace Common.Models
         public string CommandName { get; set; }
         public ICommand Command { get; set; }
         public string TagColor { get; set; }
-        public bool IsDefault { get; set; }
-        public bool IsChecked { get; set; }
+       
+        public bool IsVisible { get; set; }
 
     }
 }

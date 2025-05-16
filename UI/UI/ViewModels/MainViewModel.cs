@@ -222,7 +222,7 @@ namespace UI.ViewModels
 
                 // Filter buttons based on configuration
                 MenuButtons = new ObservableCollection<MenuButtonConfig>(allButtons.Where(button =>
-                    button.IsDefault || ShouldShowButton(button)));
+                      ShouldShowButton(button)));
             }
             catch (Exception ex)
             {
@@ -235,7 +235,7 @@ namespace UI.ViewModels
         private bool ShouldShowButton(MenuButtonConfig button)
         {
 
-            return (button.IsChecked && button.IsDefault);
+            return ( button.IsVisible);
  
         }
 
