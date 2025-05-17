@@ -27,7 +27,6 @@
     <None Remove="Images\UserIcon.png" />
     <None Remove="Images\Vision.png" />
     <None Remove="Images\WebTest.png" />
-    <None Remove="Resources\GlobalConfig.json" />
     <None Remove="Resources\MenuButtons.json" />
   </ItemGroup>
 
@@ -50,9 +49,6 @@
     <Resource Include="Images\UserIcon.png" />
     <Resource Include="Images\Vision.png" />
     <Resource Include="Images\WebTest.png" />
-    <Content Include="Resources\GlobalConfig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\MenuButtons.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
