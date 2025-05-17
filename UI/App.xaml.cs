@@ -8,7 +8,10 @@ using Services.Interfaces;
 using Services.Services;
 using log4net;
 using log4net.Config;
-
+using System.ComponentModel;
+using System.IO;
+using Prism.Ioc;
+using Prism.Unity;
 namespace UI
 {
     public partial class App : Application
@@ -23,6 +26,13 @@ namespace UI
         private static readonly ILog Log = LogManager.GetLogger(typeof(App));
         public App()
         {
+            string logDirectory = Path.Combine(Directory.GetCurrentDirectory(), "logs");
+            if (!Directory.Exists(logDirectory))
+            {
+                Directory.CreateDirectory(logDirectory);
+            }
+            XmlConfigurator.Configure(new System.IO.FileInfo("log4net.config"));
+            Log.Info("Application initialized");
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
             Services = serviceCollection.BuildServiceProvider();
@@ -61,8 +71,7 @@ namespace UI
         {
             var mainView = Services.GetRequiredService<MainWindow>();
             mainView.Show();
-            XmlConfigurator.Configure(new System.IO.FileInfo("log4net.config"));
-            Log.Info("Application started");
+          
             // Log unhandled Exception. Don't change this code.
             DispatcherUnhandledException += (s, args) =>
             {
@@ -73,6 +82,7 @@ namespace UI
           
             };
         }
-     
+        
+
     }
 }
